@@ -1,0 +1,59 @@
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="Vintage Convertible" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ2p4rfv7__n06oJ6jqe_qrHH2aNzrroc-Kiz_Ee7QaOz9gn5xbddGkbmFWiXbAEJyJ7mozMHypI7aFpLRCxjtvUc9hZGB7llFUxwv4ML-HUCqz3O0DqPFF13IULhepQtwEEP8K_yLUKN0SfhbGTbgEgzkWo5fY301ottNY38lbx_tEUhNY_Hot4b3wT6n9oWRR1Sj0qGaHU-HkyTKLsVpNp6-ap5Zbllug7P_OfvtmM1iBsqNoslttbl7c15OPCPPgEmWDzrpwQ"/>
+        <div class="absolute inset-0 hero-vignette"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+        <h1 class="text-6xl md:text-8xl text-white font-display font-medium mb-6 leading-tight">
+            Drive a <span class="italic">Legend</span>.
+        </h1>
+        <p class="text-xl md:text-2xl text-cream/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+            Experience the timeless elegance of the 1960s. Curated classics, delivered to your door.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <button class="bg-primary hover:scale-105 text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all shadow-2xl">
+                Book Your Classic
+            </button>
+            <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all border border-white/20">
+                View Fleet
+            </button>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-cream/50">
+        <span class="material-icons text-3xl">expand_more</span>
+    </div>
+</section>
+
+<div class="max-w-6xl mx-auto -mt-16 relative z-20 px-4">
+    <div class="bg-background-dark/95 border border-white/10 p-4 md:p-2 rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-stretch gap-2">
+        <div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
+            <span class="material-icons text-primary mr-3">location_on</span>
+            <div class="flex flex-col">
+                <span class="text-[10px] uppercase tracking-widest text-cream/50">Location</span>
+                <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Where to?" type="text"/>
+            </div>
+        </div>
+        <div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
+            <span class="material-icons text-primary mr-3">calendar_today</span>
+            <div class="flex flex-col">
+                <span class="text-[10px] uppercase tracking-widest text-cream/50">Dates</span>
+                <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Select timeframe" type="text"/>
+            </div>
+        </div>
+        <div class="flex-1 flex items-center px-4 py-3">
+            <span class="material-icons text-primary mr-3">directions_car</span>
+            <div class="flex flex-col">
+                <span class="text-[10px] uppercase tracking-widest text-cream/50">Preference</span>
+                <select class="bg-transparent border-none p-0 focus:ring-0 text-white text-sm appearance-none pr-8">
+                    <option class="bg-background-dark">All Era's</option>
+                    <option class="bg-background-dark">The 1950s</option>
+                    <option class="bg-background-dark">The 1960s</option>
+                    <option class="bg-background-dark">Muscle Cars</option>
+                </select>
+            </div>
+        </div>
+        <button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-colors">
+            SEARCH
+        </button>
+    </div>
+</div>

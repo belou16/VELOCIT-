@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vintage Car Rental | Drive a Legend</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1754cf",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "racing-green": "#0b2e25",
+                        "cream": "#f5f1e6",
+                        "chrome": "#d1d5db"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .hero-vignette {
+            background: linear-gradient(to bottom, rgba(17, 22, 33, 0.4) 0%, rgba(17, 22, 33, 0.8) 100%);
+        }
+        .chrome-border {
+            border: 1px solid rgba(209, 213, 219, 0.2);
+        }
+        .chrome-border:hover {
+            border: 1px solid rgba(209, 213, 219, 0.5);
+            box-shadow: 0 0 15px rgba(209, 213, 219, 0.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-cream selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold tracking-tighter text-white uppercase italic">Velocità</span>
+<div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-cream/70">
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<a class="hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="hover:text-primary transition-colors" href="#">Membership</a>
+<a class="hover:text-primary transition-colors" href="#">Concierge</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-cream/70 text-sm font-medium uppercase tracking-widest hover:text-white transition-colors">Sign In</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-medium uppercase tracking-widest transition-all">
+                Reserve Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Vintage Convertible" class="w-full h-full object-cover" data-alt="Classic silver convertible driving on coastal highway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ2p4rfv7__n06oJ6jqe_qrHH2aNzrroc-Kiz_Ee7QaOz9gn5xbddGkbmFWiXbAEJyJ7mozMHypI7aFpLRCxjtvUc9hZGB7llFUxwv4ML-HUCqz3O0DqPFF13IULhepQtwEEP8K_yLUKN0SfhbGTbgEgzkWo5fY301ottNY38lbx_tEUhNY_Hot4b3wT6n9oWRR1Sj0qGaHU-HkyTKLsVpNp6-ap5Zbllug7P_OfvtmM1iBsqNoslttbl7c15OPCPPgEmWDzrpwQ"/>
+<div class="absolute inset-0 hero-vignette"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="text-6xl md:text-8xl text-white font-medium mb-6 leading-tight">
+                Drive a <span class="italic">Legend</span>.
+            </h1>
+<p class="text-xl md:text-2xl text-cream/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Experience the timeless elegance of the 1960s. Curated classics, delivered to your door.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+<button class="bg-primary hover:scale-105 text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all shadow-2xl">
+                    Book Your Classic
+                </button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all border border-white/20">
+                    View Fleet
+                </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-cream/50">
+<span class="material-icons text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Quick Search Bar -->
+<div class="max-w-6xl mx-auto -mt-16 relative z-20 px-4">
+<div class="bg-background-dark/95 border border-white/10 p-4 md:p-2 rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-stretch gap-2">
+<div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
+<span class="material-icons text-primary mr-3">location_on</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-cream/50">Location</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Where to?" type="text"/>
+</div>
+</div>
+<div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
+<span class="material-icons text-primary mr-3">calendar_today</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-cream/50">Dates</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Select timeframe" type="text"/>
+</div>
+</div>
+<div class="flex-1 flex items-center px-4 py-3">
+<span class="material-icons text-primary mr-3">directions_car</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-cream/50">Preference</span>
+<select class="bg-transparent border-none p-0 focus:ring-0 text-white text-sm appearance-none pr-8">
+<option class="bg-background-dark">All Era's</option>
+<option class="bg-background-dark">The 1950s</option>
+<option class="bg-background-dark">The 1960s</option>
+<option class="bg-background-dark">Muscle Cars</option>
+</select>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-colors">
+                SEARCH
+            </button>
+</div>
+</div>
+<!-- Featured Collection -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+<div>
+<span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2 block">Curation</span>
+<h2 class="text-4xl md:text-5xl font-medium text-white">The Summer Collection</h2>
+</div>
+<a class="text-cream/60 hover:text-white transition-colors flex items-center gap-2 group italic text-lg" href="#">
+                View All Vehicles
+                <span class="material-icons group-hover:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Car 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
+<img alt="Jaguar E-Type" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of a 1961 Jaguar E-Type chrome grill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2PaungLHyE6OOcNmPZPz-CrGikPsRMhZxY5w2IuusScXHVDhfZa8htkVyEca1p7oMqa0ybx2cywL8LHQUqI36iKaqabEYFNGsIkDXkF8x2_46Y9gEwxNLoJ12cXJ-OnzWSHXQSpFtMhewo5INUf-UdX4A__Br7lPncXJKc4xnG60HTrd3ABSRmb5GbPWEmeG3cYKieQ6usZTcswx_G6q2peLFDPSLl1osAs_EBNgfYO-WXBWDwVO8K0UEpBSBcKrqvWVwxjCF1VE"/>
+<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
+                        FROM $450/DAY
+                    </div>
+</div>
+<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1961 Jaguar E-Type</h3>
+<p class="text-cream/50 text-sm tracking-wide uppercase">Series 1 Fixed Head Coupé</p>
+</div>
+<!-- Car 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
+<img alt="Ford Mustang" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="1965 Ford Mustang in racing red on street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqlC3V2ji7rdJ1n7ANrTzstw9SF7h2XFWE366Rvhw1zhsQLlQX9-Aiwrpms1PZzP3LFM8y5UxnAWk6AXfs92rTnO0lnewYxs1FXSl3-SZE5HkoIqMvfGyjD4NoNI0Ru3tUt2liKzsRPpMmCqTTQvvpeB1nTs2dkb71ssY5d9ErN732JVTaVtNBZJ59Zh2CZZvzXQxEdE3Bzz9o9Bnq5BZs8nVMMCKfscZss6TTfpBfqg7T1z_DSJQb27X_VCEwSGvbo7d_n_qGCaI"/>
+<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
+                        FROM $350/DAY
+                    </div>
+</div>
+<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1965 Ford Mustang</h3>
+<p class="text-cream/50 text-sm tracking-wide uppercase">V8 Convertible GT</p>
+</div>
+<!-- Car 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
+<img alt="Porsche 356" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Silver vintage Porsche 356 parked in courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsvXwmH5Sl-EIU8Miyv8oRJvVYOKOxZsji0N4m2s8c7QPf1iYHkO2LJGRafsVRbNmjcD-6upmAc85SmwD1HVTMAjEZruq_LGjQDoAiDbBeeyk6HDFPBZ9kW0lVT8GOmj_Yykv_3oldrr0vVLlyW7lNyBwSo_M9zbwUkqROqpEePU9_fMPYPQeehMSYH8-evAKE_NusvvTwFIE6Kev787OkUJoDbi-NjUNQW98goFXa4pCp9YKfY7V6Sl_ArmBL3oDlsLCuOvh5QsY"/>
+<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
+                        FROM $500/DAY
+                    </div>
+</div>
+<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1963 Porsche 356</h3>
+<p class="text-cream/50 text-sm tracking-wide uppercase">C Speedster Tribute</p>
+</div>
+</div>
+</section>
+<!-- Value Propositions -->
+<section class="bg-racing-green py-24 border-y border-white/5">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center">
+<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
+<span class="material-icons text-primary text-3xl">local_shipping</span>
+</div>
+<h4 class="text-xl font-medium mb-4 text-cream">Concierge Delivery</h4>
+<p class="text-cream/60 font-light leading-relaxed">Your machine, delivered to your driveway, airport lounge, or hotel with a full orientation.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
+<span class="material-icons text-primary text-3xl">verified_user</span>
+</div>
+<h4 class="text-xl font-medium mb-4 text-cream">Fully Insured</h4>
+<p class="text-cream/60 font-light leading-relaxed">Comprehensive specialty coverage included for every mile, so you can focus on the drive.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
+<span class="material-icons text-primary text-3xl">history_edu</span>
+</div>
+<h4 class="text-xl font-medium mb-4 text-cream">Vintage Authenticity</h4>
+<p class="text-cream/60 font-light leading-relaxed">Period-correct interiors and original mechanics, meticulously maintained for reliability.</p>
+</div>
+</div>
+</section>
+<!-- Map & Locations (Placeholder for structure) -->
+<section class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2 block">Our Presence</span>
+<h2 class="text-4xl md:text-5xl font-medium text-white mb-8">Ready for your journey.</h2>
+<div class="space-y-6">
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xl font-medium text-white">The Amalfi Coast, IT</span>
+<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
+</div>
+<p class="text-cream/50 text-sm">Our flagship Mediterranean hub offering coastal route experiences.</p>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xl font-medium text-white">Napa Valley, CA</span>
+<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
+</div>
+<p class="text-cream/50 text-sm">Classic convertibles for the ultimate wine country road trip.</p>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xl font-medium text-white">Scottish Highlands, UK</span>
+<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
+</div>
+<p class="text-cream/50 text-sm">Rugged performance classics for the North Coast 500.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Stylized vintage map of the Mediterranean coast" data-location="Amalfi Coast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrKP0XBtpviB-0P4ISF7cfn6Ek1R8KQejooO_HJsV8PMs9rZKZ0dOZvMG_oG9KdxY3mCREHqMlrmddgE7S5EOoDtAdwJdTcLLBdoQqW6L13t6NdTXx3Z3n-jbR5RarI2sDrwAuuLUYgnyAlEyGuFt2XLlzRqWdYIqaI5nosqqNktc8C84BjGNN5d2U-Ug8XxKSfehhfjaSOfhJYewalRqBuWaRYLDQaO2soY_0dJf6NC9lqnfROHGEJzofBeKP6fMb-leEwoCWpYQ"/>
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<div class="w-4 h-4 bg-primary rounded-full animate-ping"></div>
+<div class="w-3 h-3 bg-primary rounded-full absolute shadow-[0_0_20px_#1754cf]"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark py-20 px-6 border-t border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+<div class="max-w-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="text-2xl font-bold tracking-tighter text-white uppercase italic">Velocità</span>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<p class="text-cream/50 font-light leading-relaxed mb-8">
+                    Curating the world's most iconic driving machines for the modern romantic. Heritage preserved, legends reborn.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-icons text-sm text-cream/70 group-hover:text-white">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-icons text-sm text-cream/70 group-hover:text-white">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-icons text-sm text-cream/70 group-hover:text-white">play_arrow</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Drive</h5>
+<ul class="space-y-4 text-cream/50 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Classic Fleet</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Exotic Vintage</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Daily Rentals</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Event Hire</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Company</h5>
+<ul class="space-y-4 text-cream/50 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Our Garage</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Membership</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Newsletter</h5>
+<p class="text-cream/50 text-sm mb-4">Join for exclusive early access to new arrivals.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm flex-1" placeholder="Email Address" type="email"/>
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-icons">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/30 uppercase tracking-[0.2em]">
+<span>© 2024 Velocità Heritage Motoring</span>
+<div class="flex gap-8">
+<a class="hover:text-cream transition-colors" href="#">Privacy</a>
+<a class="hover:text-cream transition-colors" href="#">Terms</a>
+<a class="hover:text-cream transition-colors" href="#">Insurance</a>
+</div>
+</div>
+</footer>
+</body></html>
