@@ -1,26 +1,30 @@
-# 🏎️ Velocità | Driving a Legend
+# �🇹 Velocità | Timeless 1960s Elegance
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.x-racing-green)](https://nodejs.org/)
 [![Framework](https://img.shields.io/badge/Framework-Express%205.x-primary)](https://expressjs.com/)
 [![License](https://img.shields.io/badge/License-MIT-cream)](LICENSE)
 
-**Velocità Heritage Motoring** is a luxury car rental platform dedicated to the world's most iconic vintage machines. From the curves of the 1960s to the raw power of the 1970s, we curate history and deliver it to your door.
+**Velocità Heritage Motoring** is a luxury car rental platform dedicated exclusively to the golden age of Italian automotive art. 
+
+> *"Experience the timeless elegance of the 1960s. Curated Italian classics, delivered to your door."*
 
 ---
 
 ## ✨ Key Features
 
--   **💎 Premium Curation**: A hand-picked fleet of iconic legends (Jaguar E-Type, Porsche 356, Lamborghini Miura, and more).
+-   **🇮🇹 100% Italian Heritage**: A strictly curated collection of 27 legends from the 1960s (Ferrari, Lamborghini, Maserati, Alfa Romeo, Lancia, ISO, Bizzarrini).
+-   **🎨 Immersive Visuals**: High-definition photography from Pexels with an immersive "Grayscale to Color" hover interaction that brings history to life.
 -   **🎭 Immersive Experiences**: Bespoke driving tours like the Amalfi Coast Heritage Tour and Alpine Pass Expeditions.
--   **🤝 Personal Concierge**: White-glove service including door-to-door delivery and 24/7 roadside curation.
--   **👑 Membership Club**: Exclusive tiers for enthusiasts, offering priority access and VIP benefits.
--   **📱 Fully Responsive**: A stunning, high-end design optimized for all devices with smooth animations and professional photography.
+-   **🤝 White-Glove Concierge**: Personal orientation and door-to-door delivery to your home, airport, or hotel.
+-   **� Dynamic Discovery**: Advanced brand-based filtering on the collection page for seamless exploration.
+-   **📱 High-End Presence**: A stunning, premium design built with EJS and Tailwind CSS, optimized for every device.
 
 ## 🛠️ Tech Stack
 
--   **Frontend**: EJS (Embedded JavaScript templates), Tailwind CSS (for modern UI), Google Fonts (Outfit & Cormorant Garamond).
+-   **Frontend**: EJS (Embedded JavaScript), Vanilla CSS & Tailwind CSS, Google Fonts (Outfit & Cormorant Garamond).
 -   **Backend**: Node.js, Express 5.x.
--   **Icons**: Material Icons & Symbols.
+-   **Images**: High-resolution assets via Pexels API.
+-   **Icons**: Material Design Icons.
 -   **Process Management**: Nodemon (Development).
 
 ## 📁 Project Structure
@@ -29,10 +33,10 @@
 VELOCITÀ/
 ├── src/
 │   ├── controllers/      # Route logic & page rendering
-│   ├── services/         # Data services (API/Mock)
-│   ├── public/           # Static assets (images, css, js)
+│   ├── services/         # Data services (The 1960s Italian Fleet)
+│   ├── public/           # Static assets & Styles
 │   ├── views/            # EJS templates
-│   │   └── partials/     # Reusable components (Header, Footer, Heart)
+│   │   └── partials/     # Dynamic components (Hero, Fleet, Form)
 │   └── app.js            # Main application entry point
 ├── .gitignore            # Git exclusion rules
 ├── package.json          # Dependencies & scripts
@@ -64,20 +68,16 @@ VELOCITÀ/
     npm run dev
     ```
 
-4.  **Open the app**:
-    Navigate to `http://localhost:3000` in your browser.
+4.  **Explore the Era**:
+    Navigate to `http://localhost:3000` to start your 1960s journey.
 
-## � Preview
-
-![Site Preview](screen.png)
-
-## � License
+## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
 <p align="center">
-  <i>Curating the world's most iconic driving machines for the modern romantic.</i><br>
+  <i>Experience the timeless elegance of the 1960s. Curated classics, delivered to your door.</i><br>
   <b>Velocità Heritage Motoring © 2026</b>
 </p>
