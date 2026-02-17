@@ -1,0 +1,81 @@
+<%- include('partials/header') %>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16">
+            <!-- Image Section -->
+            <div class="lg:w-2/3">
+                <div class="relative rounded-3xl overflow-hidden chrome-border shadow-2xl group min-h-[500px] bg-background-dark">
+                    <img src="<%= car.image %>" alt="<%= car.name %>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1200'"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-md">
+                        <span class="material-icons text-primary mb-2">speed</span>
+                        <p class="text-[10px] uppercase tracking-widest text-cream/40 font-bold">Max Speed</p>
+                        <p class="text-white font-display text-xl">280 KM/H</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-md">
+                        <span class="material-icons text-primary mb-2">settings</span>
+                        <p class="text-[10px] uppercase tracking-widest text-cream/40 font-bold">Manual Gearbox</p>
+                        <p class="text-white font-display text-xl">5-Speed</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-md">
+                        <span class="material-icons text-primary mb-2">auto_awesome</span>
+                        <p class="text-[10px] uppercase tracking-widest text-cream/40 font-bold">Provenance</p>
+                        <p class="text-white font-display text-xl">Italy</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-md">
+                        <span class="material-icons text-primary mb-2">airline_seat_recline_extra</span>
+                        <p class="text-[10px] uppercase tracking-widest text-cream/40 font-bold">Interiors</p>
+                        <p class="text-white font-display text-xl">Leather</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="lg:w-1/3 space-y-8">
+                <div>
+                    <span class="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Icona Italiana</span>
+                    <h1 class="text-4xl md:text-7xl font-display font-medium text-white mb-4 italic"><%= car.name %></h1>
+                    <p class="text-cream/50 uppercase tracking-widest text-xs font-bold"><%= car.model %> • <%= car.category %></p>
+                </div>
+
+                <p class="text-xl text-cream/70 font-light leading-relaxed italic">
+                    "<%= car.description %>"
+                </p>
+
+                <div class="pt-8 border-t border-white/10">
+                    <div class="flex items-end gap-3 mb-8 bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-cream/40 font-bold mb-1">Rental Investment</p>
+                            <span class="text-5xl font-display text-white italic">$<%= car.price %></span>
+                        </div>
+                        <span class="text-cream/30 uppercase tracking-widest text-xs mb-2">/ Per Day</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-4">
+                        <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-2xl shadow-xl transition-all uppercase tracking-[0.2em] text-xs">
+                            Confirm Reservation
+                        </button>
+                        <a href="/contact" class="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold py-5 rounded-2xl transition-all uppercase tracking-widest text-[10px] text-center block">
+                            Request Private Delivery
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-8">
+                    <p class="text-xs uppercase tracking-[0.3em] text-primary font-bold">Servizio Esclusivo</p>
+                    <ul class="space-y-4 text-xs text-cream/60 uppercase tracking-widest">
+                        <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Door-to-Door Delivery</li>
+                        <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> 24/7 Supporto Tecnico</li>
+                        <li class="flex items-center gap-4"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Fully Insured Prestige</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

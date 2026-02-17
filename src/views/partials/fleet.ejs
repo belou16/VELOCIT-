@@ -1,26 +1,25 @@
-<section class="py-24 px-6 max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+<section class="max-w-7xl mx-auto px-6 py-24" id="fleet-section">
+    <div class="flex justify-between items-end mb-12">
         <div>
-            <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2 block">Curation</span>
-            <h2 class="text-4xl md:text-5xl font-display font-medium text-white">The Summer Collection</h2>
+            <span class="text-primary font-semibold tracking-widest uppercase text-xs mb-2 block">Featured Legends</span>
+            <h2 class="text-4xl md:text-6xl font-display text-white italic">Galleria d'Oro</h2>
         </div>
-        <a class="text-cream/60 hover:text-white transition-colors flex items-center gap-2 group italic text-lg font-display" href="/collections">
-            View All Vehicles
-            <span class="material-icons group-hover:translate-x-2 transition-transform">east</span>
+        <a class="text-cream/50 hover:text-white transition-colors uppercase tracking-[0.3em] text-[10px] font-bold border-b border-primary pb-2" href="/collections">
+            View All Italian Classics
         </a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <% fleet.forEach(car => { %>
-            <div class="group cursor-pointer">
-                <div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
-                    <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="<%= car.image %>"/>
-                    <div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
-                        FROM $<%= car.price %>/DAY
+        <% fleet.slice(0, 3).forEach(car => { %>
+            <a href="/car/<%= car.id %>" class="group cursor-pointer block">
+                <div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border shadow-2xl">
+                    <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="<%= car.image %>" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=1200'"/>
+                    <div class="absolute top-4 right-4 bg-background-dark/90 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-bold text-white border border-white/10 shadow-xl">
+                        $<%= car.price %>
                     </div>
                 </div>
                 <h3 class="text-2xl font-display font-medium mb-1 group-hover:text-primary transition-colors text-white"><%= car.name %></h3>
                 <p class="text-cream/50 text-sm tracking-wide uppercase"><%= car.model %></p>
-            </div>
+            </a>
         <% }) %>
     </div>
 </section>

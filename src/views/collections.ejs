@@ -2,22 +2,43 @@
 
 <main class="pt-32 pb-24">
     <div class="max-w-7xl mx-auto px-6 mb-16">
-        <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">The Garage</span>
-        <h1 class="text-5xl md:text-7xl font-display font-medium text-white mb-6">Our Collections</h1>
-        <p class="text-xl text-cream/60 max-w-2xl font-light leading-relaxed">
-            A meticulously curated selection of the finest automotive history. From the curves of the 60s to the raw power of the 70s.
-        </p>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12">
+            <div>
+                <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">Exotic Collection</span>
+                <h1 class="text-5xl md:text-8xl font-display font-medium text-white italic">La Dolce Vita</h1>
+            </div>
+            <div class="flex flex-wrap gap-4" id="category-filters">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="all">
+                    All Legends
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Ferrari">
+                    Ferrari
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Lamborghini">
+                    Lamborghini
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Alfa Romeo">
+                    Alfa Romeo
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Maserati">
+                    Maserati
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Lancia">
+                    Lancia
+                </button>
+            </div>
+        </div>
     </div>
 
     <section class="px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="fleet-grid">
             <% fleet.forEach(car => { %>
-                <div class="group cursor-pointer">
+                <a href="/car/<%= car.id %>" class="car-card group cursor-pointer block" data-category="<%= car.category %>">
                     <div class="relative aspect-[4/5] overflow-hidden rounded-2xl mb-8 chrome-border shadow-2xl">
-                        <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="<%= car.image %>"/>
+                        <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="<%= car.image %>" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1200'"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-60"></div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <div class="bg-primary/90 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-bold text-white inline-block mb-4">
+                            <div class="bg-primary/95 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-bold text-white inline-block mb-4 shadow-xl">
                                 FROM $<%= car.price %>/DAY
                             </div>
                         </div>
@@ -27,14 +48,51 @@
                             <h3 class="text-3xl font-display font-medium mb-2 group-hover:text-primary transition-colors text-white"><%= car.name %></h3>
                             <p class="text-cream/50 text-sm tracking-widest uppercase"><%= car.model %></p>
                         </div>
-                        <button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary transition-all">
-                            <span class="material-icons text-white">add</span>
-                        </button>
+                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary transition-all">
+                            <span class="material-icons text-white">east</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             <% }) %>
         </div>
     </section>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filters = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.car-card');
+
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filters.forEach(f => f.classList.remove('active', 'border-primary', 'text-white'));
+                btn.classList.add('active', 'border-primary', 'text-white');
+
+                const category = btn.dataset.category;
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<style>
+    .filter-btn.active {
+        border-color: #D4AF37; /* Primary Gold */
+        color: white;
+    }
+    .car-card {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+</style>
 
 <%- include('partials/footer') %>
