@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6 mb-16">
+        <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">The Garage</span>
+        <h1 class="text-5xl md:text-7xl font-display font-medium text-white mb-6">Our Collections</h1>
+        <p class="text-xl text-cream/60 max-w-2xl font-light leading-relaxed">
+            A meticulously curated selection of the finest automotive history. From the curves of the 60s to the raw power of the 70s.
+        </p>
+    </div>
+
+    <section class="px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <% fleet.forEach(car => { %>
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-2xl mb-8 chrome-border shadow-2xl">
+                        <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="<%= car.image %>"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-primary/90 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-bold text-white inline-block mb-4">
+                                FROM $<%= car.price %>/DAY
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-3xl font-display font-medium mb-2 group-hover:text-primary transition-colors text-white"><%= car.name %></h3>
+                            <p class="text-cream/50 text-sm tracking-widest uppercase"><%= car.model %></p>
+                        </div>
+                        <button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary transition-all">
+                            <span class="material-icons text-white">add</span>
+                        </button>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

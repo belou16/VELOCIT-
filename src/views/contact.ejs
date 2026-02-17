@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <div class="space-y-12">
+            <div>
+                <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">Get in Touch</span>
+                <h1 class="text-5xl md:text-7xl font-display font-medium text-white mb-8">Let's <span class="italic font-light">Drive</span></h1>
+                <p class="text-xl text-cream/60 font-light leading-relaxed">
+                    Whether you're planning a wedding, a solo coastal run, or interested in membership, our team is ready to assist.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="flex items-center gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+                        <span class="material-icons text-cream/60 group-hover:text-white">auto_stories</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs uppercase tracking-[0.2em] mb-1">Our Journal</h4>
+                        <p class="text-cream/40 text-sm">Follow our adventures on Instagram</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 group">
+                    <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+                        <span class="material-icons text-cream/60 group-hover:text-white">email</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs uppercase tracking-[0.2em] mb-1">Email Us</h4>
+                        <p class="text-cream/40 text-sm">concierge@velocita.luxury</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-12 rounded-3xl shadow-2xl backdrop-blur-md">
+            <form action="#" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-cream/50 ml-1">Full Name</label>
+                        <input type="text" class="w-full bg-background-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-cream/50 ml-1">Email Address</label>
+                        <input type="email" class="w-full bg-background-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com"/>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-cream/50 ml-1">Subject</label>
+                    <select class="w-full bg-background-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors appearance-none">
+                        <option>General Inquiry</option>
+                        <option>Booking Request</option>
+                        <option>Membership Interest</option>
+                        <option>Event Partnership</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-cream/50 ml-1">Message</label>
+                    <textarea rows="5" class="w-full bg-background-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell us about your dream drive..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all uppercase tracking-widest text-sm">
+                    Inquire Now
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

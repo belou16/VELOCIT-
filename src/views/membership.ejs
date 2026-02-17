@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6 mb-24 text-center">
+        <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">The Inner Circle</span>
+        <h1 class="text-5xl md:text-8xl font-display font-medium text-white mb-8">Membership</h1>
+        <p class="text-xl text-cream/60 max-w-2xl mx-auto font-light leading-relaxed">
+            Elevate your relationship with automotive history. Join the Velocità Club for priority access and exclusive privileges.
+        </p>
+    </div>
+
+    <section class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <!-- Tier 1 -->
+        <div class="p-12 rounded-3xl bg-white/5 border border-white/10 space-y-8 flex flex-col justify-between hover:bg-white/10 transition-all">
+            <div>
+                <h3 class="text-sm uppercase tracking-widest text-primary font-bold mb-4">Silver Arrow</h3>
+                <div class="text-4xl font-display text-white mb-6">$2,500 <span class="text-lg text-cream/30 font-sans">/ YEAR</span></div>
+                <ul class="space-y-4 text-cream/60 font-light">
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> 10 Driving Days per year</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> 10% Discount on additional days</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Quarterly Member Mixers</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Digital Member Journal</li>
+                </ul>
+            </div>
+            <button class="w-full py-4 rounded-xl border border-white/20 text-white uppercase tracking-widest text-xs font-bold hover:bg-white/10 transition-all">
+                Join Silver Arrow
+            </button>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="p-12 rounded-3xl bg-primary/10 border border-primary/20 space-y-8 flex flex-col justify-between hover:bg-primary/20 transition-all relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-primary px-4 py-1 text-[10px] text-white uppercase tracking-widest font-bold">Most Prestigious</div>
+            <div>
+                <h3 class="text-sm uppercase tracking-widest text-primary font-bold mb-4">The Scuderia</h3>
+                <div class="text-4xl font-display text-white mb-6">$7,500 <span class="text-lg text-cream/30 font-sans">/ YEAR</span></div>
+                <ul class="space-y-4 text-cream/60 font-light">
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Unlimited Driving (Fair use policy)</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Priority Booking for Summer Fleet</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Private Concierge assigned to you</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> Complimentary Flatbed Delivery</li>
+                    <li class="flex items-center gap-3"><span class="material-icons text-primary text-sm">check_circle</span> VIP Access to Goodwood & Monaco</li>
+                </ul>
+            </div>
+            <button class="w-full py-4 rounded-xl bg-primary text-white uppercase tracking-widest text-xs font-bold hover:bg-primary/90 transition-all shadow-xl">
+                Join The Scuderia
+            </button>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

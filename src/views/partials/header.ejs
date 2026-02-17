@@ -54,19 +54,21 @@
 <body class="font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-cream selection:bg-primary selection:text-white">
 <nav class="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-background-dark/80 backdrop-blur-md border-b border-white/5">
     <div class="flex items-center gap-2">
-        <span class="text-2xl font-display font-bold tracking-tighter text-white uppercase italic">Velocità</span>
-        <div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
+        <a href="/" class="flex items-center gap-2">
+            <span class="text-2xl font-display font-bold tracking-tighter text-white uppercase italic">Velocità</span>
+            <div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
+        </a>
     </div>
     <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-cream/70">
-        <a class="hover:text-primary transition-colors" href="#">Collections</a>
-        <a class="hover:text-primary transition-colors" href="#">Experiences</a>
-        <a class="hover:text-primary transition-colors" href="#">Membership</a>
-        <a class="hover:text-primary transition-colors" href="#">Concierge</a>
+        <a class="hover:text-primary transition-colors" href="/collections">Collections</a>
+        <a class="hover:text-primary transition-colors" href="/experiences">Experiences</a>
+        <a class="hover:text-primary transition-colors" href="/membership">Membership</a>
+        <a class="hover:text-primary transition-colors" href="/concierge">Concierge</a>
     </div>
     <div class="flex items-center gap-4">
-        <button class="text-cream/70 text-sm font-medium uppercase tracking-widest hover:text-white transition-colors">Sign In</button>
-        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-medium uppercase tracking-widest transition-all">
+        <a href="/contact" class="text-cream/70 text-sm font-medium uppercase tracking-widest hover:text-white transition-colors">Sign In</a>
+        <a href="/collections" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-medium uppercase tracking-widest transition-all">
             Reserve Now
-        </button>
+        </a>
     </div>
 </nav>
