@@ -2,102 +2,74 @@
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.x-racing-green)](https://nodejs.org/)
 [![Framework](https://img.shields.io/badge/Framework-Express%205.x-primary)](https://expressjs.com/)
-[![License](https://img.shields.io/badge/License-MIT-cream)](LICENSE)
+[![Style](https://img.shields.io/badge/Design-Italian%20Heritage-gold)](https://tailwindcss.com/)
 
-**Velocità Heritage Motoring** is a luxury car rental platform dedicated exclusively to the golden age of Italian automotive art. 
-
-> *"Experience the timeless elegance of the 1960s. Curated Italian classics, delivered to your door."*
+**Velocità Heritage Motoring** is a luxury car rental platform dedicated exclusively to the golden age of Italian automotive art (1960-1969).
 
 ---
 
-## 📸 Gallery Preview
+## 🏛️ Platform Overview
 
 <p align="center">
-  <img src="https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg" width="45%" alt="Ferrari 250 GTO" />
-  <img src="https://images.rmsothebys.com/6/1/0/0/2/8/0/610028_1.jpg" width="45%" alt="Lamborghini Miura" />
+  <img src="https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg" width="100%" alt="Velocità Hero Banner" />
 </p>
+
+### 🏎️ The Curated Fleet (27 Legends)
+Our platform showcases a meticulously sourced collection of the finest Italian machines ever built. Each car features **unique, high-resolution photography** from verified historical archives.
+
 <p align="center">
-  <img src="https://www.supercars.net/blog/wp-content/uploads/2016/04/1967_AlfaRomeo_33Stradale2.jpg" width="45%" alt="Alfa Romeo 33 Stradale" />
-  <img src="https://bringatrailer.com/wp-content/uploads/2020/03/1969_maserati_ghibli_ss_4_9_1585600000a6f4d2f808DSC_0001.jpg" width="45%" alt="Maserati Ghibli SS" />
+  <img src="https://images.rmsothebys.com/6/1/0/0/2/8/0/610028_1.jpg" width="32%" alt="Lamborghini Miura" />
+  <img src="https://images.rmsothebys.com/b/3/c/f/e/6/2/b3cfe6243881ae0b88d8b88d8b88d8b8.original.jpg" width="32%" alt="Ferrari 275 GTB" />
+  <img src="https://www.supercars.net/blog/wp-content/uploads/2016/04/1967_AlfaRomeo_33Stradale2.jpg" width="32%" alt="Alfa Romeo 33 Stradale" />
 </p>
 
 ---
 
-## ✨ Key Features
+## ✨ Immersive User Experience
 
--   **🇮🇹 100% Italian Heritage**: A strictly curated collection of 27 legends from the 1960s (Ferrari, Lamborghini, Maserati, Alfa Romeo, Lancia, ISO, Bizzarrini, Fiat).
--   **🎨 Authentic Photography**: Every car features unique, high-resolution direct imagery from prestigious archives (**RM Sotheby's**, **Bring a Trailer**, **Classic Driver**).
--   **🎭 Immersive Visuals**: "Grayscale to Color" hover interactions across the site, bringing history to life as you interact with it.
--   **🤝 White-Glove Concierge**: Personal orientation and door-to-door delivery.
--   **🔍 Brand Discovery**: Advanced filtering by manufacturer on the collection page.
--   **📱 Premium Design**: Stunning UI built with EJS and Tailwind CSS, fully responsive.
+### 🏠 Homepage & Discovery
+A cinematic journey through time.
+- **Grayscale Interaction**: All cars appear in timeless monochrome, revealing their true vibrant colors upon hover.
+- **Brand Heritage**: Filter by your favorite marque (Ferrari, Lamborghini, Maserati, Alfa Romeo, etc.).
 
----
+### 🏎️ Interactive Collections
+- **Authentic Data**: Historical descriptions and accurate technical specs.
+- **Premium Concierge**: A white-glove service overview including door-to-door delivery.
+- **Bespoke Experiences**: Pre-planned tours (Amalfi Coast, Alpine Passes).
 
-## 🗺️ Website Contents
-
-### 🏠 Homepage
-- **Cinematic Hero**: Immersive introduction to the 1960s elegance.
-- **Value Propositions**: Overview of insurance, concierge, and authenticity.
-- **Featured Fleet**: A curated look at the top models in the collection.
-
-### 🏎️ Collections
-- **Full Historical Fleet**: The complete 27-car interactive list.
-- **Dynamic Filters**: Quick-access categories for Ferrari, Lamborghini, etc.
-- **Interactive Cards**: High-end hover effects revealing the true colors of each machine.
-
-### 📜 Car Details
-- **Historical Context**: In-depth description and technical data for each model.
-- **Booking Interface**: Premium reservation system for curated escapes.
-
-### 🎭 Experiences
-- **Amalfi Coast Heritage Tour**: Iconic drives along the Mediterranean.
-- **Alpine Pass Expedition**: Testing the limits of 1960s transaxles in the mountains.
-
-### 👔 Concierge & Beyond
-- **Bespoke Delivery**: Details on how we bring the legend to your door.
-- **Membership**: Elite tiers for the modern enthusiast.
+<p align="center">
+  <img src="https://bringatrailer.com/wp-content/uploads/2020/03/1969_maserati_ghibli_ss_4_9_1585600000a6f4d2f808DSC_0001.jpg" width="48%" alt="Maserati Ghibli" />
+  <img src="https://images.rmsothebys.com/8/2/0/1/3/6/5/8201365_1.jpg" width="48%" alt="Lamborghini Espada" />
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Masterpiece
 
--   **Frontend**: EJS (Embedded JavaScript), Tailwind CSS, Vanilla JS.
--   **Backend**: Node.js, Express 5.x.
--   **Imagery**: Historical Real Photos (Direct URLs).
--   **Typography**: Outfit & Cormorant Garamond (Google Fonts).
+- **Frontend**: EJS Templating for dynamic car injection across all pages.
+- **Styling**: Tailored Tailwind CSS with a focus on "Glassmorphism" and "Cinema Noir" aesthetics.
+- **Backend**: Express 5.x handling the fleet management and route optimization.
+- **Assets**: Historical real-world photos integrated via specialized direct URLs for maximum realism.
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Map
 
 ```text
 VELOCITÀ/
-├── src/
-│   ├── controllers/      # Route logic & page rendering
-│   ├── services/         # Data services (Verified 1960s Italian Fleet)
-│   ├── public/           # Static assets & Styles
-│   ├── views/            # EJS templates
-│   │   └── partials/     # Reusable UI components
-│   └── app.js            # Express application entry point
-├── package.json          # Project configuration
-└── README.md             # Documentation
+├── 🌐 src/app.js         # Core Engine
+├── 📦 src/services/      # The 1960s Italian Fleet Archive
+├── 🎨 src/views/         # Immersive Templates
+│   ├── index.ejs         # The Grand Arrival
+│   ├── collections.ejs   # The Full Fleet Gallery
+│   ├── car-detail.ejs    # The Machine's History
+│   └── concierge.ejs     # Premium White-Glove
+└── 🖼️ src/public/        # Design Tokens & Interactive Logic
 ```
 
 ---
 
-## 🚀 Getting Started
-
-### Installation
-1. `git clone https://github.com/belou16/VELOCIT-.git`
-2. `npm install`
-3. `npm run dev`
-
-Navigate to `http://localhost:3000` to start your 1960s journey.
-
----
-
 <p align="center">
-  <i>Experience the timeless elegance of the 1960s. Curated classics, delivered to your door.</i><br>
+  <i>"Experience the timeless elegance of the 1960s. Curated classics, delivered to your door."</i><br>
   <b>Velocità Heritage Motoring © 2026</b>
 </p>
