@@ -21,6 +21,7 @@
       font-family: "Roboto", sans-serif;
       background: radial-gradient(circle at 20% 0%, #2a2a2a 0%, var(--nero-italiano) 45%, #0d0d0d 100%);
       color: var(--crema-panna);
+      overflow-x: hidden;
     }
     .display-font { font-family: "Playfair Display", serif; }
     .mono-font { font-family: "Roboto Mono", monospace; }
@@ -28,54 +29,75 @@
       box-shadow: 0 0 0 1px rgba(212,175,55,.35), 0 12px 30px rgba(0,0,0,.45), 0 0 26px rgba(212,175,55,.28);
       border-color: rgba(212,175,55,.7);
     }
+    .catalog-filters {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .catalog-filters::-webkit-scrollbar { display: none; }
     .speed-lines {
       background-image: repeating-linear-gradient(120deg, rgba(212,175,55,.1) 0px, rgba(212,175,55,.1) 1px, transparent 1px, transparent 20px);
+    }
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2.35rem;
+        line-height: 1.03;
+      }
+      .card-title {
+        font-size: 1.35rem;
+      }
     }
   </style>
 </head>
 <body>
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 text-xl font-black tracking-wider uppercase">
-        <img src="./src/public/images/velocita-mark.svg" alt="Velocita logo" class="w-9 h-9 rounded-lg border border-[var(--oro-metallico)]/50" />
-        <span>Velocita</span>
-      </a>
+    <div class="max-w-7xl mx-auto px-4 md:px-5 py-3 md:py-4 flex items-center justify-between gap-3">
+      <a href="#" class="text-xl font-black tracking-wider uppercase">Velocita</a>
       <nav class="hidden md:flex gap-8 text-xs uppercase tracking-[0.25em] text-white/75">
         <a href="#catalog">Collection</a>
         <a href="#experience">Experience</a>
         <a href="#booking">Booking</a>
       </nav>
-      <button class="bg-[var(--oro-metallico)] text-black px-4 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded">Reserve</button>
+      <div class="flex items-center gap-2">
+        <button class="hidden sm:inline-flex bg-[var(--oro-metallico)] text-black px-4 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded">Reserve</button>
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/25 text-white/80" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/95">
+      <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3 text-xs uppercase tracking-[0.25em] text-white/80">
+        <a href="#catalog">Collection</a>
+        <a href="#experience">Experience</a>
+        <a href="#booking">Booking</a>
+      </nav>
     </div>
   </header>
 
   <section class="relative min-h-[76vh] speed-lines overflow-hidden">
-    <div class="max-w-7xl mx-auto px-5 py-16 grid lg:grid-cols-2 gap-10 items-center">
+    <div class="max-w-7xl mx-auto px-4 md:px-5 py-10 md:py-16 grid lg:grid-cols-2 gap-8 md:gap-10 items-center">
       <div>
         <p class="mono-font text-xs tracking-[0.35em] uppercase text-[var(--oro-metallico)] mb-4">Relive the golden age of Italian design</p>
-        <h1 class="display-font text-5xl md:text-7xl leading-[0.95] text-[var(--crema-panna)]">Timeless 1960s<br/>Italian Icons</h1>
+        <h1 class="hero-title display-font text-5xl md:text-7xl leading-[0.95] text-[var(--crema-panna)]">Timeless 1960s<br/>Italian Icons</h1>
         <p class="mt-6 text-white/75 max-w-xl">Luxury rental platform for Ferrari, Alfa Romeo, Maserati and Lamborghini classics. Vintage spirit, modern booking flow.</p>
-        <div class="mt-8 flex gap-3">
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
           <a href="#catalog" class="px-5 py-3 text-xs uppercase tracking-[0.2em] border border-[var(--oro-metallico)] bg-[var(--oro-metallico)] text-black font-semibold rounded">Explore Fleet</a>
           <a href="#booking" class="px-5 py-3 text-xs uppercase tracking-[0.2em] border border-white/25 rounded">Start Booking</a>
         </div>
       </div>
       <div class="rounded-3xl overflow-hidden border border-[var(--oro-metallico)]/40">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/1963_Ferrari_250_GTO_%28chassis_4153GT%29_2.95.jpg" alt="Ferrari 250 GTO" class="w-full h-[420px] object-cover" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/1963_Ferrari_250_GTO_%28chassis_4153GT%29_2.95.jpg" alt="Ferrari 250 GTO" class="w-full h-[280px] sm:h-[340px] md:h-[420px] object-cover" />
       </div>
     </div>
   </section>
 
-  <section id="catalog" class="max-w-7xl mx-auto px-5 py-16">
+  <section id="catalog" class="max-w-7xl mx-auto px-4 md:px-5 py-12 md:py-16">
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
       <div>
         <p class="mono-font text-xs uppercase tracking-[0.3em] text-white/50">1960-1969 Curated Archive</p>
         <h2 class="display-font text-4xl md:text-6xl">Complete Car Catalog</h2>
       </div>
-      <div class="flex flex-wrap gap-2" id="filters"></div>
+      <div class="catalog-filters flex gap-2" id="filters"></div>
     </div>
     <div id="stats" class="text-xs uppercase tracking-[0.2em] text-white/60 mb-6"></div>
-    <div id="grid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+    <div id="grid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6"></div>
   </section>
 
   <section id="experience" class="border-y border-white/10 bg-black/30">
@@ -95,7 +117,7 @@
     </div>
   </section>
 
-  <section id="booking" class="max-w-7xl mx-auto px-5 py-16">
+  <section id="booking" class="max-w-7xl mx-auto px-4 md:px-5 py-12 md:py-16">
     <h2 class="display-font text-4xl mb-6">Booking Flow Preview</h2>
     <div class="grid md:grid-cols-3 gap-4 text-sm">
       <div class="border border-white/15 rounded-xl p-5"><span class="mono-font text-[var(--oro-metallico)]">01</span><p class="mt-2">Select model, year and location.</p></div>
@@ -137,11 +159,27 @@
     const stats = document.getElementById("stats");
     const brands = ["all", ...new Set(cars.map(c => c.brand))];
     let active = "all";
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
 
     function renderFilters() {
       filters.innerHTML = brands.map(b => {
         const selected = b === active;
-        return `<button data-brand="${b}" class="px-4 py-2 rounded-full border text-xs uppercase tracking-[0.2em] ${selected ? "bg-[var(--oro-metallico)] text-black border-[var(--oro-metallico)]" : "border-white/20 text-white/80"}">${b}</button>`;
+        return `<button data-brand="${b}" class="shrink-0 px-4 py-2 rounded-full border text-xs uppercase tracking-[0.2em] ${selected ? "bg-[var(--oro-metallico)] text-black border-[var(--oro-metallico)]" : "border-white/20 text-white/80"}">${b}</button>`;
       }).join("");
       filters.querySelectorAll("button").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -157,16 +195,16 @@
       stats.textContent = `${list.length} vehicles displayed`;
       grid.innerHTML = list.map(car => `
         <article class="gold-glow border border-white/15 rounded-2xl overflow-hidden bg-black/35 transition-all duration-300">
-          <img src="${car.image}" alt="${car.name}" class="w-full h-56 object-cover" />
-          <div class="p-4">
+          <img src="${car.image}" alt="${car.name}" class="w-full h-52 sm:h-56 object-cover" loading="lazy" />
+          <div class="p-4 sm:p-5">
             <div class="flex justify-between items-start gap-4">
               <div>
-                <h3 class="display-font text-2xl leading-tight">${car.name}</h3>
-                <p class="text-sm text-white/70 mt-1">${car.model}</p>
+                <h3 class="card-title display-font text-2xl leading-tight">${car.name}</h3>
+                <p class="text-xs sm:text-sm text-white/70 mt-1">${car.model}</p>
               </div>
               <span class="mono-font text-[10px] uppercase tracking-[0.15em] text-[var(--oro-metallico)]">${car.brand}</span>
             </div>
-            <div class="mt-4 flex justify-between text-xs uppercase tracking-[0.12em] text-white/70">
+            <div class="mt-4 flex flex-wrap gap-2 sm:gap-0 sm:justify-between text-[11px] sm:text-xs uppercase tracking-[0.08em] sm:tracking-[0.12em] text-white/70">
               <span>${car.year}</span>
               <span>${car.location}</span>
               <span>EUR ${car.price}/day</span>

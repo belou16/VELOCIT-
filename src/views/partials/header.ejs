@@ -37,7 +37,7 @@
     <style type="text/tailwindcss">
         @layer base {
             body { 
-                @apply bg-[#030303] text-white antialiased font-['Inter']; 
+                @apply bg-[#030303] text-white antialiased font-['Inter'] overflow-x-hidden;
                 scroll-behavior: smooth;
             }
             .italic-heading { font-family: 'Cormorant Garamond', serif; }
@@ -61,13 +61,10 @@
 </head>
 <body class="selection:bg-white selection:text-black">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-full focus:z-[100]">Skip to content</a>
-    <nav class="fixed top-0 z-50 w-full h-20 border-b border-white/5 bg-black/90">
-        <div class="apple-container h-full flex items-center justify-between">
+    <nav class="fixed top-0 z-50 w-full h-16 md:h-20 border-b border-white/5 bg-black/90">
+        <div class="apple-container h-full flex items-center justify-between gap-4">
             <div class="flex items-center gap-3">
-                <a href="/" class="flex items-center gap-3 text-xl font-black tracking-tighter italic uppercase text-white" aria-label="VELOCITa home">
-                    <img src="/images/velocita-mark.svg" alt="VELOCITa logo" class="w-9 h-9 rounded-lg border border-[#d4af37]/40" loading="eager" />
-                    <span>VELOCITa</span>
-                </a>
+                <a href="/" class="text-xl font-black tracking-tighter italic uppercase text-white" aria-label="VELOCITa home">VELOCITa</a>
             </div>
             <div class="hidden md:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/30">
                 <a class="hover:text-white transition-colors" href="/collections">Collections</a>
@@ -75,8 +72,21 @@
                 <a class="hover:text-white transition-colors" href="/membership">Club</a>
                 <a class="hover:text-white transition-colors" href="/concierge">Concierge</a>
             </div>
-            <div class="flex items-center gap-6">
-                <a href="/contact" class="btn-scuderia">Reserve</a>
+            <div class="flex items-center gap-3 md:gap-6">
+                <a href="/contact" class="btn-scuderia hidden sm:inline-flex">Reserve</a>
+                <button id="mobile-menu-toggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/20 text-white/80" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="material-symbols-outlined text-lg">menu</span>
+                </button>
             </div>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="md:hidden fixed top-16 left-0 right-0 z-40 border-b border-white/10 bg-[#0b0b0b]/95 backdrop-blur hidden">
+        <div class="apple-container py-4 flex flex-col gap-3 text-[11px] font-black uppercase tracking-[0.35em] text-white/80">
+            <a href="/collections" class="py-2">Collections</a>
+            <a href="/experiences" class="py-2">Experiences</a>
+            <a href="/membership" class="py-2">Club</a>
+            <a href="/concierge" class="py-2">Concierge</a>
+            <a href="/contact" class="py-2 text-[#D4AF37]">Reserve</a>
+        </div>
+    </div>

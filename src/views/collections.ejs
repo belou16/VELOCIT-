@@ -1,46 +1,46 @@
 <%- include('partials/header') %>
 
-<main id="main-content" class="pt-60 pb-60 bg-[#030303]">
+<main id="main-content" class="pt-28 md:pt-60 pb-20 md:pb-60 bg-[#030303] overflow-x-hidden">
     <div class="apple-container">
         <% const categories = ['all', ...new Set(fleet.map((car) => car.category))]; %>
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-24 border-b border-white/5 pb-24 mb-32">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10 md:gap-24 border-b border-white/5 pb-10 md:pb-24 mb-12 md:mb-32">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-white/40 mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-[9px] md:text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.4em] text-white/40 mb-6 md:mb-10">
                     The Archive // 1960-1969 // <%= fleet.length %> cars
                 </div>
-                <h1 class="text-7xl md:text-[140px] font-black tracking-tighter text-white italic-heading italic uppercase leading-[0.85]">
+                <h1 class="text-5xl sm:text-6xl md:text-[140px] font-black tracking-tight md:tracking-tighter text-white italic-heading italic uppercase leading-[0.9] md:leading-[0.85]">
                     Proven <br/>
                     <span class="text-white/20 not-italic">Heritage.</span>
                 </h1>
             </div>
             
-            <div class="flex flex-wrap gap-4" id="filters" role="toolbar" aria-label="Filter cars by brand">
+            <div class="flex gap-3 overflow-x-auto pb-2 pr-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden w-full lg:w-auto" id="filters" role="toolbar" aria-label="Filter cars by brand">
                 <% categories.forEach(cat => { %>
-                    <button class="filter-btn px-10 py-4 rounded-full border text-[10px] font-black uppercase tracking-[0.4em] transition-all duration-300 <%= cat === 'all' ? 'is-active bg-[#D4AF37]/20 text-[#F5F5DC] border-[#D4AF37]/60 shadow-[0_0_0_1px_rgba(212,175,55,0.25)]' : 'bg-white/5 text-white/50 border-white/10 hover:text-[#F5F5DC] hover:border-[#D4AF37]/40' %>" data-category="<%= cat %>" aria-pressed="<%= cat === 'all' ? 'true' : 'false' %>">
+                    <button class="filter-btn shrink-0 px-5 md:px-10 py-3 md:py-4 rounded-full border text-[10px] font-black uppercase tracking-[0.22em] md:tracking-[0.4em] transition-all duration-300 <%= cat === 'all' ? 'is-active bg-[#D4AF37]/20 text-[#F5F5DC] border-[#D4AF37]/60 shadow-[0_0_0_1px_rgba(212,175,55,0.25)]' : 'bg-white/5 text-white/50 border-white/10 hover:text-[#F5F5DC] hover:border-[#D4AF37]/40' %>" data-category="<%= cat %>" aria-pressed="<%= cat === 'all' ? 'true' : 'false' %>">
                         <%= cat %>
                     </button>
                 <% }) %>
             </div>
         </div>
 
-        <p id="fleet-count" class="text-[10px] font-black uppercase tracking-[0.35em] text-white/40 mb-10" aria-live="polite"><%= fleet.length %> vehicles displayed</p>
+        <p id="fleet-count" class="text-[10px] font-black uppercase tracking-[0.22em] md:tracking-[0.35em] text-white/40 mb-8 md:mb-10" aria-live="polite"><%= fleet.length %> vehicles displayed</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-40" id="fleet-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-40" id="fleet-grid">
             <% fleet.forEach(car => { %>
                 <div class="car-card group" data-category="<%= car.category %>">
                     <a href="/car/<%= car.id %>" class="block">
-                        <div class="apple-glass p-2 rounded-[64px] group-hover:scale-[1.01] mb-12 overflow-hidden transition-all duration-700">
-                            <div class="aspect-[4/5] rounded-[56px] overflow-hidden bg-neutral-900 relative">
+                        <div class="apple-glass p-2 rounded-[36px] md:rounded-[64px] group-hover:scale-[1.01] mb-5 md:mb-12 overflow-hidden transition-all duration-700">
+                            <div class="aspect-[4/5] rounded-[30px] md:rounded-[56px] overflow-hidden bg-neutral-900 relative">
                                 <img src="<%= car.image %>" alt="<%= car.name %>" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000" loading="lazy" />
-                                <div class="absolute top-12 left-12 apple-glass px-8 py-3 rounded-full text-[10px] font-black text-white italic-heading italic">
+                                <div class="absolute top-4 left-4 md:top-12 md:left-12 apple-glass px-4 md:px-8 py-2 md:py-3 rounded-full text-[10px] font-black text-white italic-heading italic">
                                     €<%= car.price %> / DAY
                                 </div>
                             </div>
                         </div>
-                        <div class="px-8 flex items-start justify-between">
+                        <div class="px-2 md:px-8 flex items-start justify-between gap-4">
                             <div>
-                                <h3 class="text-4xl font-black italic-heading italic text-white uppercase tracking-tighter mb-2"><%= car.name %></h3>
-                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-white/20"><%= car.model %></p>
+                                <h3 class="text-2xl md:text-4xl font-black italic-heading italic text-white uppercase tracking-tight md:tracking-tighter mb-2"><%= car.name %></h3>
+                                <p class="text-[10px] font-black uppercase tracking-[0.22em] md:tracking-[0.5em] text-white/20"><%= car.model %></p>
                             </div>
                             <span class="text-[10px] font-black uppercase tracking-[0.5em] text-white/10 italic italic-heading"><%= car.category %></span>
                         </div>
