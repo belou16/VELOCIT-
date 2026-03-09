@@ -3,11 +3,34 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title><%= typeof title !== 'undefined' ? `${title} | VELOCITà` : 'VELOCITà | Italian Heritage 1960' %></title>
+    <title><%= typeof title !== 'undefined' ? `${title} | VELOCITa` : 'VELOCITa | Italian Heritage 1960' %></title>
+    <meta name="description" content="<%= typeof metaDescription !== 'undefined' ? metaDescription : 'Luxury vintage car rentals inspired by 1960s Italian design and grand touring culture.' %>" />
+    <meta name="keywords" content="<%= typeof metaKeywords !== 'undefined' ? metaKeywords : 'vintage cars, italian classics, luxury rentals, ferrari, lamborghini, maserati, alfa romeo' %>" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="VELOCITa" />
+    <meta name="theme-color" content="#030303" />
+
+    <link rel="canonical" href="<%= typeof currentUrl !== 'undefined' ? currentUrl : '' %>" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VELOCITa" />
+    <meta property="og:title" content="<%= typeof title !== 'undefined' ? `${title} | VELOCITa` : 'VELOCITa | Italian Heritage 1960' %>" />
+    <meta property="og:description" content="<%= typeof metaDescription !== 'undefined' ? metaDescription : 'Luxury vintage car rentals inspired by 1960s Italian design and grand touring culture.' %>" />
+    <meta property="og:url" content="<%= typeof currentUrl !== 'undefined' ? currentUrl : '' %>" />
+    <meta property="og:image" content="<%= typeof ogImage !== 'undefined' ? ogImage : '' %>" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%= typeof title !== 'undefined' ? `${title} | VELOCITa` : 'VELOCITa | Italian Heritage 1960' %>" />
+    <meta name="twitter:description" content="<%= typeof metaDescription !== 'undefined' ? metaDescription : 'Luxury vintage car rentals inspired by 1960s Italian design and grand touring culture.' %>" />
+    <meta name="twitter:image" content="<%= typeof ogImage !== 'undefined' ? ogImage : '' %>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Cormorant+Garamond:ital,wght@1,300;1,700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="/css/vintage-1960.css" rel="stylesheet"/>
     
     <style type="text/tailwindcss">
         @layer base {
@@ -35,10 +58,11 @@
     </style>
 </head>
 <body class="selection:bg-white selection:text-black">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-full focus:z-[100]">Skip to content</a>
     <nav class="fixed top-0 z-50 w-full h-20 border-b border-white/5 bg-black/90">
         <div class="apple-container h-full flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <a href="/" class="text-xl font-black tracking-tighter italic uppercase text-white">VELOCITà</a>
+                <a href="/" class="text-xl font-black tracking-tighter italic uppercase text-white" aria-label="VELOCITa home">VELOCITa</a>
             </div>
             <div class="hidden md:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/30">
                 <a class="hover:text-white transition-colors" href="/collections">Collections</a>

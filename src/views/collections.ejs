@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 
-<main class="pt-60 pb-60 bg-[#030303]">
+<main id="main-content" class="pt-60 pb-60 bg-[#030303]">
     <div class="apple-container">
         <% const categories = ['all', ...new Set(fleet.map((car) => car.category))]; %>
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-24 border-b border-white/5 pb-24 mb-32">
@@ -14,14 +14,16 @@
                 </h1>
             </div>
             
-            <div class="flex flex-wrap gap-4" id="filters">
+            <div class="flex flex-wrap gap-4" id="filters" role="toolbar" aria-label="Filter cars by brand">
                 <% categories.forEach(cat => { %>
-                    <button class="filter-btn px-10 py-4 rounded-full border border-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-white/30 hover:text-white transition-all duration-300 <%= cat === 'all' ? 'bg-white text-black border-transparent' : 'bg-white/5' %>" data-category="<%= cat %>">
+                    <button class="filter-btn px-10 py-4 rounded-full border text-[10px] font-black uppercase tracking-[0.4em] transition-all duration-300 <%= cat === 'all' ? 'is-active bg-[#D4AF37]/20 text-[#F5F5DC] border-[#D4AF37]/60 shadow-[0_0_0_1px_rgba(212,175,55,0.25)]' : 'bg-white/5 text-white/50 border-white/10 hover:text-[#F5F5DC] hover:border-[#D4AF37]/40' %>" data-category="<%= cat %>" aria-pressed="<%= cat === 'all' ? 'true' : 'false' %>">
                         <%= cat %>
                     </button>
                 <% }) %>
             </div>
         </div>
+
+        <p id="fleet-count" class="text-[10px] font-black uppercase tracking-[0.35em] text-white/40 mb-10" aria-live="polite"><%= fleet.length %> vehicles displayed</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-40" id="fleet-grid">
             <% fleet.forEach(car => { %>
@@ -52,26 +54,41 @@
 <script>
     const btns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.car-card');
+    const fleetCount = document.getElementById('fleet-count');
+
+    function applyFilter(cat) {
+        let visibleCount = 0;
+
+        btns.forEach((btn) => {
+            const selected = btn.dataset.category === cat;
+            btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+            btn.classList.toggle('is-active', selected);
+            btn.classList.toggle('bg-[#D4AF37]/20', selected);
+            btn.classList.toggle('text-[#F5F5DC]', selected);
+            btn.classList.toggle('border-[#D4AF37]/60', selected);
+            btn.classList.toggle('shadow-[0_0_0_1px_rgba(212,175,55,0.25)]', selected);
+
+            btn.classList.toggle('bg-white/5', !selected);
+            btn.classList.toggle('text-white/50', !selected);
+            btn.classList.toggle('border-white/10', !selected);
+        });
+
+        cards.forEach((card) => {
+            const shouldShow = cat === 'all' || card.dataset.category === cat;
+            card.style.display = shouldShow ? 'block' : 'none';
+            if (shouldShow) visibleCount += 1;
+        });
+
+        fleetCount.textContent = `${visibleCount} vehicles displayed`;
+    }
     
     btns.forEach(btn => {
         btn.addEventListener('click', () => {
-            btns.forEach(b => {
-                b.classList.remove('bg-white', 'text-black', 'border-transparent');
-                b.classList.add('bg-white/5', 'text-white/30', 'border-white/5');
-            });
-            btn.classList.add('bg-white', 'text-black', 'border-transparent');
-            btn.classList.remove('bg-white/5', 'text-white/30', 'border-white/5');
-            
-            const cat = btn.dataset.category;
-            cards.forEach(card => {
-                if(cat === 'all' || card.dataset.category === cat) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            applyFilter(btn.dataset.category);
         });
     });
+
+    applyFilter('all');
 </script>
 
 <%- include('partials/footer') %>

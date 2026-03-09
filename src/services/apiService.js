@@ -7,7 +7,7 @@ const fleet = [
         year: 1962,
         location: "Maranello",
         price: 4200,
-        image: "https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/1963_Ferrari_250_GTO_%28chassis_4153GT%29_2.95.jpg/1280px-1963_Ferrari_250_GTO_%28chassis_4153GT%29_2.95.jpg",
         description: "The ultimate expression of 1960s Italian racing elegance, built for homologation and now worshiped as an icon."
     },
     {
@@ -18,7 +18,7 @@ const fleet = [
         year: 1966,
         location: "Sant'Agata",
         price: 2900,
-        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/1971_Lamborghini_Miura_P400_SV.jpg/1280px-1971_Lamborghini_Miura_P400_SV.jpg",
         description: "The car that redefined the supercar formula with a dramatic mid-engine layout and unmatched visual theatre."
     },
     {
@@ -29,7 +29,7 @@ const fleet = [
         year: 1965,
         location: "Milan",
         price: 1250,
-        image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Arese_Museo_Storico_Alfa_Romeo_1965_Giulia_Sprint_GTA_1.jpg/1280px-Arese_Museo_Storico_Alfa_Romeo_1965_Giulia_Sprint_GTA_1.jpg",
         description: "A lightweight homologation special with racing DNA, balancing compact elegance and fierce character."
     },
     {
@@ -40,7 +40,7 @@ const fleet = [
         year: 1967,
         location: "Turin",
         price: 1650,
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1967_Maserati_Mistral_Coupe_-_silver_-_fvr_%284637057473%29_cropped.jpg/1280px-1967_Maserati_Mistral_Coupe_-_silver_-_fvr_%284637057473%29_cropped.jpg",
         description: "A razor-sharp Giugiaro silhouette and long-legged V8 power made this one of Italy's finest grand tourers."
     },
     {
@@ -51,7 +51,7 @@ const fleet = [
         year: 1964,
         location: "Modena",
         price: 2600,
-        image: "https://images.unsplash.com/photo-1592193660979-241777794c41?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/1966_Ferrari_275_GTB_sn_08549%2C_front_left_%28Greenwich_2019%29.jpg/1280px-1966_Ferrari_275_GTB_sn_08549%2C_front_left_%28Greenwich_2019%29.jpg",
         description: "A key Ferrari turning point, combining refined GT comfort with serious performance and timeless proportions."
     },
     {
@@ -62,7 +62,7 @@ const fleet = [
         year: 1966,
         location: "Liguria",
         price: 820,
-        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Alfa_Romeo_%283568179480%29.jpg/1280px-Alfa_Romeo_%283568179480%29.jpg",
         description: "A romantic open-top icon of Italian summers, famous for graceful lines and a playful twin-cam spirit."
     },
     {
@@ -73,7 +73,7 @@ const fleet = [
         year: 1966,
         location: "Florence",
         price: 2200,
-        image: "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ferrari_250_Lusso_in_Grey%2C_front_right.jpg/1280px-Ferrari_250_Lusso_in_Grey%2C_front_right.jpg",
         description: "Silk-smooth V12 touring with understated class, perfect for long-distance continental driving."
     },
     {
@@ -84,7 +84,7 @@ const fleet = [
         year: 1968,
         location: "Rome",
         price: 3400,
-        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1973_Ferrari_Daytona_365_GTB4_Blue_LC22.jpg/1280px-1973_Ferrari_Daytona_365_GTB4_Blue_LC22.jpg",
         description: "An aggressive V12 front-engine legend born to answer the new supercar era with authority."
     },
     {
@@ -95,7 +95,7 @@ const fleet = [
         year: 1966,
         location: "Como",
         price: 1850,
-        image: "https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/1967_Lamborghini_400_GT_2%2B2%2C_front_left%2C_Greenwich_2018.jpg/1280px-1967_Lamborghini_400_GT_2%2B2%2C_front_left%2C_Greenwich_2018.jpg",
         description: "The sophisticated grand touring side of Lamborghini with elegant Touring-built coachwork."
     },
     {
@@ -106,7 +106,7 @@ const fleet = [
         year: 1968,
         location: "Bergamo",
         price: 2100,
-        image: "https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lamborghini_Islero%2C_Techno_Classica_2018%2C_Essen_%28IMG_9696%29.jpg/1280px-Lamborghini_Islero%2C_Techno_Classica_2018%2C_Essen_%28IMG_9696%29.jpg",
         description: "A discreet V12 bruiser favored by purists who value performance over theatrics."
     },
     {
@@ -117,7 +117,7 @@ const fleet = [
         year: 1968,
         location: "Bologna",
         price: 1780,
-        image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lamborghini-Espada.jpg/1280px-Lamborghini-Espada.jpg",
         description: "Bold, angular and uniquely practical, this V12 four-seater remains a design statement."
     },
     {
@@ -128,7 +128,7 @@ const fleet = [
         year: 1964,
         location: "Genoa",
         price: 1480,
-        image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1967_Maserati_Mistral_Coupe_-_silver_-_fvr_%284637057473%29_cropped.jpg/1280px-1967_Maserati_Mistral_Coupe_-_silver_-_fvr_%284637057473%29_cropped.jpg",
         description: "A sleek Frua-designed coupe that blends racing heritage with refined grand touring manners."
     },
     {
@@ -139,7 +139,7 @@ const fleet = [
         year: 1963,
         location: "Lake Garda",
         price: 1360,
-        image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Maserati-3500gti.jpg/1280px-Maserati-3500gti.jpg",
         description: "Fast and elegant, the Sebring delivered true GT comfort with a distinctly Italian soul."
     },
     {
@@ -150,7 +150,7 @@ const fleet = [
         year: 1966,
         location: "Milan",
         price: 1420,
-        image: "https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2015_Maserati_Quattroporte_DV6_Automatic_3.0_Front.jpg/1280px-2015_Maserati_Quattroporte_DV6_Automatic_3.0_Front.jpg",
         description: "The original high-performance luxury sedan, engineered for speed with executive comfort."
     },
     {
@@ -161,7 +161,7 @@ const fleet = [
         year: 1968,
         location: "Turin",
         price: 980,
-        image: "https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/81/Alfa_Romeo_GT_1300_Junior.jpg",
         description: "One of Alfa Romeo's sweetest road cars, celebrated for chassis balance and lively twin-cam character."
     },
     {
@@ -172,7 +172,7 @@ const fleet = [
         year: 1963,
         location: "Brescia",
         price: 1980,
-        image: "https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/1963_Alfa_Romeo_Giulia_TZ_in_ivory_%28Lime_Rock%29.jpg/1280px-1963_Alfa_Romeo_Giulia_TZ_in_ivory_%28Lime_Rock%29.jpg",
         description: "A rare lightweight competition machine with aerodynamic bodywork from Zagato."
     },
     {
@@ -183,7 +183,7 @@ const fleet = [
         year: 1967,
         location: "Sicily",
         price: 940,
-        image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fiat_Dino_reg_1968_1987_cc.JPG/1280px-Fiat_Dino_reg_1968_1987_cc.JPG",
         description: "Compact Italian drama with Ferrari-derived V6 sound and classic open-air styling."
     },
     {
@@ -194,7 +194,7 @@ const fleet = [
         year: 1969,
         location: "Turin",
         price: 1020,
-        image: "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fiat_Dino_reg_1968_1987_cc.JPG/1280px-Fiat_Dino_reg_1968_1987_cc.JPG",
         description: "A sharp Bertone coupe combining accessible GT usability with exotic mechanical pedigree."
     },
     {
@@ -205,7 +205,7 @@ const fleet = [
         year: 1965,
         location: "Turin",
         price: 860,
-        image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Lancia_Motor_Club_AGM_2011_DSC_4294_-_Flickr_-_tonylanciabeta_%28cropped%29.jpg/1280px-Lancia_Motor_Club_AGM_2011_DSC_4294_-_Flickr_-_tonylanciabeta_%28cropped%29.jpg",
         description: "Light, precise and full of character, the Fulvia became a hero on tarmac rally stages."
     },
     {
@@ -216,7 +216,7 @@ const fleet = [
         year: 1962,
         location: "Milan",
         price: 1290,
-        image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/1961_Lancia_Flaminia_GT%2C_front_right.jpg/1280px-1961_Lancia_Flaminia_GT%2C_front_right.jpg",
         description: "A refined grand tourer with coachbuilt sophistication and a relaxed long-distance temperament."
     },
     {
@@ -227,7 +227,7 @@ const fleet = [
         year: 1967,
         location: "Livorno",
         price: 2400,
-        image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/1966_Ferrari_275_GTB_sn_08549%2C_front_left_%28Greenwich_2019%29.jpg/1280px-1966_Ferrari_275_GTB_sn_08549%2C_front_left_%28Greenwich_2019%29.jpg",
         description: "Low, brutal and unforgettable, this road racer reflects pure engineering obsession."
     },
     {
@@ -238,7 +238,7 @@ const fleet = [
         year: 1967,
         location: "Como",
         price: 1880,
-        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/1969_Iso_Grifo_in_Rosso_Chiaro_%28Darren_Frank%29%2C_front_left%2C_at_Greenwich_2019.jpg/1280px-1969_Iso_Grifo_in_Rosso_Chiaro_%28Darren_Frank%29%2C_front_left%2C_at_Greenwich_2019.jpg",
         description: "Italian sculpture with transatlantic power, crafted for elegant high-speed cruising."
     },
     {
@@ -249,7 +249,7 @@ const fleet = [
         year: 1963,
         location: "Rome",
         price: 2700,
-        image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ferrari_250_Lusso_in_Grey%2C_front_right.jpg/1280px-Ferrari_250_Lusso_in_Grey%2C_front_right.jpg",
         description: "A beautifully balanced grand tourer famed for one of Ferrari's most elegant body designs."
     },
     {
@@ -260,7 +260,7 @@ const fleet = [
         year: 1968,
         location: "Venice",
         price: 1580,
-        image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=1200",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/40/Maserati_Mexico.jpg",
         description: "Rare and elegant, the Mexico offers discreet V8 performance in a distinguished GT package."
     }
 ];
