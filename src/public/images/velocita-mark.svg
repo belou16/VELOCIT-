@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Velocita logo">
+  <rect width="512" height="512" rx="96" fill="#0d0d0d"/>
+  <circle cx="256" cy="256" r="188" fill="none" stroke="#d4af37" stroke-width="18" opacity="0.95"/>
+  <path d="M140 156 L238 360 L274 360 L372 156 L332 156 L256 318 L180 156 Z" fill="#f5f5dc"/>
+  <rect x="122" y="388" width="268" height="8" rx="4" fill="#d4af37" opacity="0.85"/>
+</svg>
