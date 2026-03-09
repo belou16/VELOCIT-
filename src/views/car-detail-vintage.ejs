@@ -1,0 +1,65 @@
+<%- include('partials/header') %>
+
+<main class="min-h-screen bg-[#1A1A1A] text-[#F5F5DC] pt-28 md:pt-32 overflow-x-hidden">
+  <section class="relative">
+    <div class="absolute inset-0 opacity-30 pointer-events-none" style="background-image: repeating-linear-gradient(115deg, rgba(212, 175, 55, 0.14) 0px, rgba(212, 175, 55, 0.14) 1px, transparent 1px, transparent 24px);"></div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-14 py-10 md:py-16 grid lg:grid-cols-12 gap-8 lg:gap-10 relative">
+      <aside class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#D4AF37]/30 bg-black shadow-[0_20px_55px_rgba(0,0,0,0.55)]">
+        <img src="<%= car.image %>" alt="<%= car.name %>" class="w-full h-[320px] md:h-[520px] object-cover" loading="eager" />
+
+        <div class="p-5 md:p-7 bg-gradient-to-r from-black to-[#1A1A1A] border-t border-[#D4AF37]/20">
+          <p class="text-xs tracking-[0.2em] uppercase text-[#D4AF37] font-semibold">Ferrari Golden Age Archive</p>
+          <h1 class="mt-2 text-3xl md:text-5xl font-['Playfair_Display'] text-[#F5F5DC]"><%= car.name %></h1>
+          <p class="mt-2 text-sm md:text-base text-[#F5F5DC]/80 font-['Roboto']"><%= car.model %></p>
+        </div>
+      </aside>
+
+      <section class="lg:col-span-5 space-y-6 md:space-y-8">
+        <article class="rounded-2xl p-5 md:p-7 bg-[#111] border border-[#D4AF37]/25 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition hover:shadow-[0_0_24px_rgba(212,175,55,0.25)]">
+          <h2 class="text-xl md:text-2xl font-['Playfair_Display'] text-[#D4AF37]">Vehicle Story</h2>
+          <p class="mt-4 text-[#F5F5DC]/85 leading-relaxed font-['Roboto']"><%= car.description %></p>
+
+          <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-lg bg-[#1A1A1A] p-3 border border-[#D4AF37]/15">
+              <dt class="text-[#D4AF37] uppercase tracking-widest text-[10px]">Brand</dt>
+              <dd class="mt-1 text-[#F5F5DC]"><%= car.category %></dd>
+            </div>
+            <div class="rounded-lg bg-[#1A1A1A] p-3 border border-[#D4AF37]/15">
+              <dt class="text-[#D4AF37] uppercase tracking-widest text-[10px]">Daily Rate</dt>
+              <dd class="mt-1 text-[#F5F5DC]">EUR <%= car.price %></dd>
+            </div>
+            <div class="rounded-lg bg-[#1A1A1A] p-3 border border-[#D4AF37]/15">
+              <dt class="text-[#D4AF37] uppercase tracking-widest text-[10px]">Insurance</dt>
+              <dd class="mt-1 text-[#F5F5DC]">Premium Included</dd>
+            </div>
+            <div class="rounded-lg bg-[#1A1A1A] p-3 border border-[#D4AF37]/15">
+              <dt class="text-[#D4AF37] uppercase tracking-widest text-[10px]">Location</dt>
+              <dd class="mt-1 text-[#F5F5DC]">Maranello</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="rounded-2xl p-5 md:p-7 bg-[#0F0F0F] border border-[#D4AF37]/25">
+          <h3 class="text-lg md:text-xl text-[#D4AF37] font-['Playfair_Display']">Reserve This Icon</h3>
+
+          <form class="mt-5 space-y-4" action="/contact" method="get">
+            <div>
+              <label class="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2">Pickup Date</label>
+              <input type="date" class="w-full rounded-lg border border-[#D4AF37]/30 bg-[#1A1A1A] p-3 text-[#F5F5DC] font-['Roboto'] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-[0.2em] text-[#D4AF37] mb-2">Return Date</label>
+              <input type="date" class="w-full rounded-lg border border-[#D4AF37]/30 bg-[#1A1A1A] p-3 text-[#F5F5DC] font-['Roboto'] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50" />
+            </div>
+            <button class="w-full rounded-lg border border-[#D4AF37] px-4 py-3 bg-[#D4AF37] text-[#1A1A1A] font-semibold tracking-wider uppercase transition hover:bg-transparent hover:text-[#D4AF37]">
+              Continue Booking
+            </button>
+          </form>
+        </article>
+      </section>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

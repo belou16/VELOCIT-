@@ -1,59 +1,60 @@
 <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Base Image Layer -->
     <div class="absolute inset-0 z-0">
-        <img alt="Classic Italian Roadster" class="w-full h-full object-cover" src="https://images.pexels.com/photos/10394779/pexels-photo-10394779.jpeg?auto=compress&cs=tinysrgb&w=2000"/>
-        <div class="absolute inset-0 hero-vignette"></div>
+        <img alt="Vintage Italian Spec" class="w-full h-full object-cover grayscale opacity-40" src="https://images.unsplash.com/photo-1592193660979-241777794c41?auto=format&fit=crop&q=80&w=2000"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#030303]"></div>
     </div>
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-        <h1 class="text-6xl md:text-8xl font-display text-white mb-8 tracking-tighter italic">
-            Timeless <span class="text-primary not-italic">Elegance</span>
+
+    <!-- Content Layer -->
+    <div class="relative z-10 text-center px-4 max-w-5xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-white/40 mb-10">
+            Heritage Archive // 1960s Italy
+        </div>
+        <h1 class="text-7xl md:text-[120px] text-white font-black italic-heading italic mb-8 leading-[0.85] uppercase tracking-tighter">
+            Drive a <br/>
+            <span class="text-white/20 not-italic">Legend.</span>
         </h1>
-        <p class="text-xl md:text-2xl text-cream/90 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-            Experience the timeless elegance of the 1960s. Curated Italian classics, delivered to your door for the ultimate escape.
+        <p class="text-xl md:text-2xl text-white/40 mb-16 max-w-2xl mx-auto font-light leading-relaxed italic-heading italic">
+            Experience the definitive elegance of the 1960s. Curated Italian classics, delivered to your residence.
         </p>
-        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-            <a href="/collections" class="bg-primary hover:scale-105 text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all shadow-2xl inline-block">
-                Book Your Classic
-            </a>
-            <a href="/collections" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all border border-white/20 inline-block">
-                View Fleet
-            </a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a href="/collections" class="btn-scuderia">Explore Fleet</a>
+            <a href="/about" class="text-[10px] font-black uppercase tracking-[0.5em] text-white/40 hover:text-white transition-all border-b border-white/10 pb-2">The Narrative</a>
         </div>
     </div>
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-cream/50">
-        <span class="material-icons text-3xl">expand_more</span>
+
+    <!-- Original Quick Search Bar (Apple-fied) -->
+    <div class="absolute bottom-12 w-full px-6 z-20 hidden lg:block">
+        <div class="max-w-5xl mx-auto apple-glass p-1.5 rounded-[40px] flex items-stretch gap-1">
+            <div class="flex-1 flex items-center px-8 py-4 border-r border-white/5">
+                <span class="material-symbols-outlined text-white/20 mr-4">location_on</span>
+                <div class="flex flex-col">
+                    <span class="text-[8px] uppercase tracking-[0.4em] text-white/30 font-black">Region</span>
+                    <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/10 text-xs italic italic-heading" placeholder="Tuscany / Amalfi" type="text"/>
+                </div>
+            </div>
+            <div class="flex-1 flex items-center px-8 py-4 border-r border-white/5">
+                <span class="material-symbols-outlined text-white/20 mr-4">calendar_today</span>
+                <div class="flex flex-col">
+                    <span class="text-[8px] uppercase tracking-[0.4em] text-white/30 font-black">Timeline</span>
+                    <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/10 text-xs italic italic-heading" placeholder="Select Period" type="text"/>
+                </div>
+            </div>
+            <div class="flex-1 flex items-center px-8 py-4">
+                <span class="material-symbols-outlined text-white/20 mr-4">database</span>
+                <div class="flex flex-col">
+                    <span class="text-[8px] uppercase tracking-[0.4em] text-white/30 font-black">Archive</span>
+                    <select class="bg-transparent border-none p-0 focus:ring-0 text-white text-xs appearance-none pr-8 italic italic-heading">
+                        <option class="bg-[#030303]">All Manufacturers</option>
+                        <option class="bg-[#030303]">Ferrari</option>
+                        <option class="bg-[#030303]">Lamborghini</option>
+                        <option class="bg-[#030303]">Maserati</option>
+                    </select>
+                </div>
+            </div>
+            <button class="bg-white text-black px-12 rounded-[32px] font-black text-[10px] uppercase tracking-[0.3em] hover:bg-neutral-200 transition-colors">
+                SEARCH
+            </button>
+        </div>
     </div>
 </section>
-
-<div class="max-w-6xl mx-auto -mt-16 relative z-20 px-4">
-    <div class="bg-background-dark/95 border border-white/10 p-4 md:p-2 rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-stretch gap-2">
-        <div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
-            <span class="material-icons text-primary mr-3">location_on</span>
-            <div class="flex flex-col">
-                <span class="text-[10px] uppercase tracking-widest text-cream/50">Location</span>
-                <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Where to?" type="text"/>
-            </div>
-        </div>
-        <div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
-            <span class="material-icons text-primary mr-3">calendar_today</span>
-            <div class="flex flex-col">
-                <span class="text-[10px] uppercase tracking-widest text-cream/50">Dates</span>
-                <input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Select timeframe" type="text"/>
-            </div>
-        </div>
-        <div class="flex-1 flex items-center px-4 py-3">
-            <span class="material-icons text-primary mr-3">directions_car</span>
-            <div class="flex flex-col">
-                <span class="text-[10px] uppercase tracking-widest text-cream/50">Preference</span>
-                <select class="bg-transparent border-none p-0 focus:ring-0 text-white text-sm appearance-none pr-8">
-                    <option class="bg-background-dark">All Era's</option>
-                    <option class="bg-background-dark">The 1950s</option>
-                    <option class="bg-background-dark">The 1960s</option>
-                    <option class="bg-background-dark">Muscle Cars</option>
-                </select>
-            </div>
-        </div>
-        <a href="/collections" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-colors text-center inline-block">
-            SEARCH
-        </a>
-    </div>
-</div>

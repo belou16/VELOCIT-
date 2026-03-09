@@ -1,87 +1,53 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta name="description" content="Velocità Heritage Motoring - Drive the world's most iconic vintage cars. Curated classics, delivered to your door. Experience the 1960s legends today.">
-    <meta name="keywords" content="vintage car rental, classic car hire, luxury car rental, Velocità, heritage motoring, Jaguar E-Type, Porsche 356">
+    <title><%= typeof title !== 'undefined' ? `${title} | VELOCITà` : 'VELOCITà | Italian Heritage 1960' %></title>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://velocita.luxury/">
-    <meta property="og:title" content="Velocità | Drive a Legend">
-    <meta property="og:description" content="Experience the timeless elegance of vintage machines. Curated classics, delivered to your door.">
-    <meta property="og:image" content="/screen.png">
-
-    <title><%= typeof title !== 'undefined' ? `${title} | Velocità` : 'Velocità | Drive a Legend' %></title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Cormorant+Garamond:ital,wght@1,300;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1754cf",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                        "racing-green": "#0b2e25",
-                        "cream": "#f5f1e6",
-                        "chrome": "#d1d5db"
-                    },
-                    fontFamily: {
-                        "sans": ["Outfit", "sans-serif"],
-                        "display": ["Cormorant Garamond", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply bg-[#030303] text-white antialiased font-['Inter']; 
+                scroll-behavior: smooth;
+            }
+            .italic-heading { font-family: 'Cormorant Garamond', serif; }
         }
-    </script>
-    <style>
-        .hero-vignette {
-            background: linear-gradient(to bottom, rgba(17, 22, 33, 0.4) 0%, rgba(17, 22, 33, 0.8) 100%);
+        @layer components {
+            .apple-container {
+                @apply max-w-[1400px] mx-auto px-6 md:px-12;
+            }
+            /* High-performance glass: No blur, just semi-transparent for zero lag */
+            .apple-glass {
+                @apply bg-white/[0.03] border border-white/5;
+            }
+            .nav-link {
+                @apply text-[10px] font-black uppercase tracking-[0.4em] text-white/30 hover:text-white transition-colors duration-300;
+            }
+            .btn-scuderia {
+                @apply bg-white text-black px-8 py-3.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] hover:bg-neutral-200 transition-all duration-300;
+            }
         }
-        .chrome-border {
-            border: 1px solid rgba(209, 213, 219, 0.2);
-        }
-        .chrome-border:hover {
-            border: 1px solid rgba(209, 213, 219, 0.5);
-            box-shadow: 0 0 15px rgba(209, 213, 219, 0.1);
-        }
-        .font-display { font-family: 'Cormorant Garamond', serif; }
-        .font-sans { font-family: 'Outfit', sans-serif; }
     </style>
 </head>
-<body class="font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-cream selection:bg-primary selection:text-white">
-<nav class="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-background-dark/80 backdrop-blur-md border-b border-white/5">
-    <div class="flex items-center gap-2">
-        <a href="/" class="flex items-center gap-2">
-            <span class="text-2xl font-display font-bold tracking-tighter text-white uppercase italic">Velocità</span>
-            <div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
-        </a>
-    </div>
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-cream/70">
-        <a class="hover:text-primary transition-colors" href="/collections">Collections</a>
-        <a class="hover:text-primary transition-colors" href="/experiences">Experiences</a>
-        <a class="hover:text-primary transition-colors" href="/membership">Membership</a>
-        <a class="hover:text-primary transition-colors" href="/concierge">Concierge</a>
-    </div>
-    <div class="flex items-center gap-4">
-        <a href="/contact" class="text-cream/70 text-sm font-medium uppercase tracking-widest hover:text-white transition-colors">Sign In</a>
-        <a href="/collections" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-medium uppercase tracking-widest transition-all">
-            Reserve Now
-        </a>
-    </div>
-</nav>
+<body class="selection:bg-white selection:text-black">
+    <nav class="fixed top-0 z-50 w-full h-20 border-b border-white/5 bg-black/90">
+        <div class="apple-container h-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="/" class="text-xl font-black tracking-tighter italic uppercase text-white">VELOCITà</a>
+            </div>
+            <div class="hidden md:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/30">
+                <a class="hover:text-white transition-colors" href="/collections">Collections</a>
+                <a class="hover:text-white transition-colors" href="/experiences">Experiences</a>
+                <a class="hover:text-white transition-colors" href="/membership">Club</a>
+                <a class="hover:text-white transition-colors" href="/concierge">Concierge</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="/contact" class="btn-scuderia">Reserve</a>
+            </div>
+        </div>
+    </nav>

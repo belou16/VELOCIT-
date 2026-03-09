@@ -1,15 +1,24 @@
 <%- include('partials/header') %>
 
-<main class="h-screen flex items-center justify-center text-center px-6">
-    <div>
-        <h1 class="text-9xl font-display font-medium text-white mb-4 italic opacity-20">404</h1>
-        <h2 class="text-4xl font-display text-white mb-8">Road Not Found</h2>
-        <p class="text-xl text-cream/60 max-w-md mx-auto mb-12 font-light">
-            It seems the machine you are looking for has already sped away or the route doesn't exist.
-        </p>
-        <a href="/" class="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-2xl text-sm font-bold uppercase tracking-widest transition-all shadow-2xl">
-            Return to Garage
-        </a>
+<main class="h-screen flex items-center justify-center text-center px-6 hero-gradient overflow-hidden">
+    <div class="relative">
+        <h1 class="text-[15rem] md:text-[25rem] font-black text-white italic tracking-tighter opacity-[0.03] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none">404</h1>
+        <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 mb-10">
+                <span class="flex h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+                Senza Via
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black text-white italic tracking-tighter uppercase mb-6 leading-none">
+                Road Not <br/>
+                <span class="not-italic bg-clip-text text-transparent bg-gradient-to-b from-white to-white/30">Found.</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-white/50 max-w-md mx-auto font-light leading-relaxed mb-12">
+                It seems the machine you are looking for has already sped away or the route no longer exists.
+            </p>
+            <a href="/" class="inline-block bg-white text-black px-12 py-6 rounded-full text-[11px] font-black uppercase tracking-[0.3em] hover:bg-white/90 transition-all shadow-4xl hover:scale-105">
+                Return to Garage
+            </a>
+        </div>
     </div>
 </main>
 

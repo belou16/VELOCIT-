@@ -1,306 +1,177 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vintage Car Rental | Drive a Legend</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1754cf",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                        "racing-green": "#0b2e25",
-                        "cream": "#f5f1e6",
-                        "chrome": "#d1d5db"
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>
-        .hero-vignette {
-            background: linear-gradient(to bottom, rgba(17, 22, 33, 0.4) 0%, rgba(17, 22, 33, 0.8) 100%);
-        }
-        .chrome-border {
-            border: 1px solid rgba(209, 213, 219, 0.2);
-        }
-        .chrome-border:hover {
-            border: 1px solid rgba(209, 213, 219, 0.5);
-            box-shadow: 0 0 15px rgba(209, 213, 219, 0.1);
-        }
-    </style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velocita | Timeless 1960s Elegance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rosso-corsa: #DC143C;
+      --oro-metallico: #D4AF37;
+      --nero-italiano: #1A1A1A;
+      --crema-panna: #F5F5DC;
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      background: radial-gradient(circle at 20% 0%, #2a2a2a 0%, var(--nero-italiano) 45%, #0d0d0d 100%);
+      color: var(--crema-panna);
+    }
+    .display-font { font-family: "Playfair Display", serif; }
+    .mono-font { font-family: "Roboto Mono", monospace; }
+    .gold-glow:hover {
+      box-shadow: 0 0 0 1px rgba(212,175,55,.35), 0 12px 30px rgba(0,0,0,.45), 0 0 26px rgba(212,175,55,.28);
+      border-color: rgba(212,175,55,.7);
+    }
+    .speed-lines {
+      background-image: repeating-linear-gradient(120deg, rgba(212,175,55,.1) 0px, rgba(212,175,55,.1) 1px, transparent 1px, transparent 20px);
+    }
+  </style>
 </head>
-<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-cream selection:bg-primary selection:text-white">
-<!-- Navigation -->
-<nav class="fixed w-full z-50 px-6 py-4 flex items-center justify-between bg-background-dark/80 backdrop-blur-md border-b border-white/5">
-<div class="flex items-center gap-2">
-<span class="text-2xl font-bold tracking-tighter text-white uppercase italic">Velocità</span>
-<div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
-</div>
-<div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-cream/70">
-<a class="hover:text-primary transition-colors" href="#">Collections</a>
-<a class="hover:text-primary transition-colors" href="#">Experiences</a>
-<a class="hover:text-primary transition-colors" href="#">Membership</a>
-<a class="hover:text-primary transition-colors" href="#">Concierge</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="text-cream/70 text-sm font-medium uppercase tracking-widest hover:text-white transition-colors">Sign In</button>
-<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-medium uppercase tracking-widest transition-all">
-                Reserve Now
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Vintage Convertible" class="w-full h-full object-cover" data-alt="Classic silver convertible driving on coastal highway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ2p4rfv7__n06oJ6jqe_qrHH2aNzrroc-Kiz_Ee7QaOz9gn5xbddGkbmFWiXbAEJyJ7mozMHypI7aFpLRCxjtvUc9hZGB7llFUxwv4ML-HUCqz3O0DqPFF13IULhepQtwEEP8K_yLUKN0SfhbGTbgEgzkWo5fY301ottNY38lbx_tEUhNY_Hot4b3wT6n9oWRR1Sj0qGaHU-HkyTKLsVpNp6-ap5Zbllug7P_OfvtmM1iBsqNoslttbl7c15OPCPPgEmWDzrpwQ"/>
-<div class="absolute inset-0 hero-vignette"></div>
-</div>
-<div class="relative z-10 text-center px-4 max-w-4xl">
-<h1 class="text-6xl md:text-8xl text-white font-medium mb-6 leading-tight">
-                Drive a <span class="italic">Legend</span>.
-            </h1>
-<p class="text-xl md:text-2xl text-cream/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Experience the timeless elegance of the 1960s. Curated classics, delivered to your door.
-            </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-4">
-<button class="bg-primary hover:scale-105 text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all shadow-2xl">
-                    Book Your Classic
-                </button>
-<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-xl text-lg font-medium uppercase tracking-widest transition-all border border-white/20">
-                    View Fleet
-                </button>
-</div>
-</div>
-<!-- Scroll Indicator -->
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-cream/50">
-<span class="material-icons text-3xl">expand_more</span>
-</div>
-</section>
-<!-- Quick Search Bar -->
-<div class="max-w-6xl mx-auto -mt-16 relative z-20 px-4">
-<div class="bg-background-dark/95 border border-white/10 p-4 md:p-2 rounded-2xl shadow-2xl backdrop-blur-xl flex flex-col md:flex-row items-stretch gap-2">
-<div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
-<span class="material-icons text-primary mr-3">location_on</span>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-cream/50">Location</span>
-<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Where to?" type="text"/>
-</div>
-</div>
-<div class="flex-1 flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-white/10">
-<span class="material-icons text-primary mr-3">calendar_today</span>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-cream/50">Dates</span>
-<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm" placeholder="Select timeframe" type="text"/>
-</div>
-</div>
-<div class="flex-1 flex items-center px-4 py-3">
-<span class="material-icons text-primary mr-3">directions_car</span>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase tracking-widest text-cream/50">Preference</span>
-<select class="bg-transparent border-none p-0 focus:ring-0 text-white text-sm appearance-none pr-8">
-<option class="bg-background-dark">All Era's</option>
-<option class="bg-background-dark">The 1950s</option>
-<option class="bg-background-dark">The 1960s</option>
-<option class="bg-background-dark">Muscle Cars</option>
-</select>
-</div>
-</div>
-<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-colors">
-                SEARCH
-            </button>
-</div>
-</div>
-<!-- Featured Collection -->
-<section class="py-24 px-6 max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
-<div>
-<span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2 block">Curation</span>
-<h2 class="text-4xl md:text-5xl font-medium text-white">The Summer Collection</h2>
-</div>
-<a class="text-cream/60 hover:text-white transition-colors flex items-center gap-2 group italic text-lg" href="#">
-                View All Vehicles
-                <span class="material-icons group-hover:translate-x-2 transition-transform">east</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Car 1 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
-<img alt="Jaguar E-Type" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of a 1961 Jaguar E-Type chrome grill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2PaungLHyE6OOcNmPZPz-CrGikPsRMhZxY5w2IuusScXHVDhfZa8htkVyEca1p7oMqa0ybx2cywL8LHQUqI36iKaqabEYFNGsIkDXkF8x2_46Y9gEwxNLoJ12cXJ-OnzWSHXQSpFtMhewo5INUf-UdX4A__Br7lPncXJKc4xnG60HTrd3ABSRmb5GbPWEmeG3cYKieQ6usZTcswx_G6q2peLFDPSLl1osAs_EBNgfYO-WXBWDwVO8K0UEpBSBcKrqvWVwxjCF1VE"/>
-<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
-                        FROM $450/DAY
-                    </div>
-</div>
-<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1961 Jaguar E-Type</h3>
-<p class="text-cream/50 text-sm tracking-wide uppercase">Series 1 Fixed Head Coupé</p>
-</div>
-<!-- Car 2 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
-<img alt="Ford Mustang" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="1965 Ford Mustang in racing red on street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqlC3V2ji7rdJ1n7ANrTzstw9SF7h2XFWE366Rvhw1zhsQLlQX9-Aiwrpms1PZzP3LFM8y5UxnAWk6AXfs92rTnO0lnewYxs1FXSl3-SZE5HkoIqMvfGyjD4NoNI0Ru3tUt2liKzsRPpMmCqTTQvvpeB1nTs2dkb71ssY5d9ErN732JVTaVtNBZJ59Zh2CZZvzXQxEdE3Bzz9o9Bnq5BZs8nVMMCKfscZss6TTfpBfqg7T1z_DSJQb27X_VCEwSGvbo7d_n_qGCaI"/>
-<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
-                        FROM $350/DAY
-                    </div>
-</div>
-<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1965 Ford Mustang</h3>
-<p class="text-cream/50 text-sm tracking-wide uppercase">V8 Convertible GT</p>
-</div>
-<!-- Car 3 -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] overflow-hidden rounded-xl mb-6 chrome-border">
-<img alt="Porsche 356" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Silver vintage Porsche 356 parked in courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsvXwmH5Sl-EIU8Miyv8oRJvVYOKOxZsji0N4m2s8c7QPf1iYHkO2LJGRafsVRbNmjcD-6upmAc85SmwD1HVTMAjEZruq_LGjQDoAiDbBeeyk6HDFPBZ9kW0lVT8GOmj_Yykv_3oldrr0vVLlyW7lNyBwSo_M9zbwUkqROqpEePU9_fMPYPQeehMSYH8-evAKE_NusvvTwFIE6Kev787OkUJoDbi-NjUNQW98goFXa4pCp9YKfY7V6Sl_ArmBL3oDlsLCuOvh5QsY"/>
-<div class="absolute top-4 right-4 bg-background-dark/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white border border-white/10">
-                        FROM $500/DAY
-                    </div>
-</div>
-<h3 class="text-2xl font-medium mb-1 group-hover:text-primary transition-colors">1963 Porsche 356</h3>
-<p class="text-cream/50 text-sm tracking-wide uppercase">C Speedster Tribute</p>
-</div>
-</div>
-</section>
-<!-- Value Propositions -->
-<section class="bg-racing-green py-24 border-y border-white/5">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
-<div class="text-center">
-<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
-<span class="material-icons text-primary text-3xl">local_shipping</span>
-</div>
-<h4 class="text-xl font-medium mb-4 text-cream">Concierge Delivery</h4>
-<p class="text-cream/60 font-light leading-relaxed">Your machine, delivered to your driveway, airport lounge, or hotel with a full orientation.</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
-<span class="material-icons text-primary text-3xl">verified_user</span>
-</div>
-<h4 class="text-xl font-medium mb-4 text-cream">Fully Insured</h4>
-<p class="text-cream/60 font-light leading-relaxed">Comprehensive specialty coverage included for every mile, so you can focus on the drive.</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 chrome-border">
-<span class="material-icons text-primary text-3xl">history_edu</span>
-</div>
-<h4 class="text-xl font-medium mb-4 text-cream">Vintage Authenticity</h4>
-<p class="text-cream/60 font-light leading-relaxed">Period-correct interiors and original mechanics, meticulously maintained for reliability.</p>
-</div>
-</div>
-</section>
-<!-- Map & Locations (Placeholder for structure) -->
-<section class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-2 block">Our Presence</span>
-<h2 class="text-4xl md:text-5xl font-medium text-white mb-8">Ready for your journey.</h2>
-<div class="space-y-6">
-<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
-<div class="flex justify-between items-center mb-2">
-<span class="text-xl font-medium text-white">The Amalfi Coast, IT</span>
-<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
-</div>
-<p class="text-cream/50 text-sm">Our flagship Mediterranean hub offering coastal route experiences.</p>
-</div>
-<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
-<div class="flex justify-between items-center mb-2">
-<span class="text-xl font-medium text-white">Napa Valley, CA</span>
-<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
-</div>
-<p class="text-cream/50 text-sm">Classic convertibles for the ultimate wine country road trip.</p>
-</div>
-<div class="p-6 bg-white/5 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer group">
-<div class="flex justify-between items-center mb-2">
-<span class="text-xl font-medium text-white">Scottish Highlands, UK</span>
-<span class="material-icons text-primary group-hover:scale-125 transition-transform">explore</span>
-</div>
-<p class="text-cream/50 text-sm">Rugged performance classics for the North Coast 500.</p>
-</div>
-</div>
-</div>
-<div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
-<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Stylized vintage map of the Mediterranean coast" data-location="Amalfi Coast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrKP0XBtpviB-0P4ISF7cfn6Ek1R8KQejooO_HJsV8PMs9rZKZ0dOZvMG_oG9KdxY3mCREHqMlrmddgE7S5EOoDtAdwJdTcLLBdoQqW6L13t6NdTXx3Z3n-jbR5RarI2sDrwAuuLUYgnyAlEyGuFt2XLlzRqWdYIqaI5nosqqNktc8C84BjGNN5d2U-Ug8XxKSfehhfjaSOfhJYewalRqBuWaRYLDQaO2soY_0dJf6NC9lqnfROHGEJzofBeKP6fMb-leEwoCWpYQ"/>
-<div class="absolute inset-0 flex items-center justify-center z-20">
-<div class="w-4 h-4 bg-primary rounded-full animate-ping"></div>
-<div class="w-3 h-3 bg-primary rounded-full absolute shadow-[0_0_20px_#1754cf]"></div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-background-dark py-20 px-6 border-t border-white/5">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-<div class="max-w-sm">
-<div class="flex items-center gap-2 mb-6">
-<span class="text-2xl font-bold tracking-tighter text-white uppercase italic">Velocità</span>
-<div class="w-2 h-2 rounded-full bg-primary"></div>
-</div>
-<p class="text-cream/50 font-light leading-relaxed mb-8">
-                    Curating the world's most iconic driving machines for the modern romantic. Heritage preserved, legends reborn.
-                </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
-<span class="material-icons text-sm text-cream/70 group-hover:text-white">facebook</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
-<span class="material-icons text-sm text-cream/70 group-hover:text-white">camera</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors group" href="#">
-<span class="material-icons text-sm text-cream/70 group-hover:text-white">play_arrow</span>
-</a>
-</div>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-<div>
-<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Drive</h5>
-<ul class="space-y-4 text-cream/50 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Classic Fleet</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Exotic Vintage</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Daily Rentals</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Event Hire</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Company</h5>
-<ul class="space-y-4 text-cream/50 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Our Garage</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Membership</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Journal</a></li>
-</ul>
-</div>
-<div class="col-span-2 md:col-span-1">
-<h5 class="text-white font-medium mb-6 uppercase tracking-widest text-xs">Newsletter</h5>
-<p class="text-cream/50 text-sm mb-4">Join for exclusive early access to new arrivals.</p>
-<div class="flex border-b border-white/20 pb-2">
-<input class="bg-transparent border-none p-0 focus:ring-0 text-white placeholder-white/30 text-sm flex-1" placeholder="Email Address" type="email"/>
-<button class="text-primary hover:text-white transition-colors">
-<span class="material-icons">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/30 uppercase tracking-[0.2em]">
-<span>© 2024 Velocità Heritage Motoring</span>
-<div class="flex gap-8">
-<a class="hover:text-cream transition-colors" href="#">Privacy</a>
-<a class="hover:text-cream transition-colors" href="#">Terms</a>
-<a class="hover:text-cream transition-colors" href="#">Insurance</a>
-</div>
-</div>
-</footer>
-</body></html>
+<body>
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="text-xl font-black tracking-wider uppercase">Velocita</div>
+      <nav class="hidden md:flex gap-8 text-xs uppercase tracking-[0.25em] text-white/75">
+        <a href="#catalog">Collection</a>
+        <a href="#experience">Experience</a>
+        <a href="#booking">Booking</a>
+      </nav>
+      <button class="bg-[var(--oro-metallico)] text-black px-4 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded">Reserve</button>
+    </div>
+  </header>
+
+  <section class="relative min-h-[76vh] speed-lines overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 py-16 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="mono-font text-xs tracking-[0.35em] uppercase text-[var(--oro-metallico)] mb-4">Relive the golden age of Italian design</p>
+        <h1 class="display-font text-5xl md:text-7xl leading-[0.95] text-[var(--crema-panna)]">Timeless 1960s<br/>Italian Icons</h1>
+        <p class="mt-6 text-white/75 max-w-xl">Luxury rental platform for Ferrari, Alfa Romeo, Maserati and Lamborghini classics. Vintage spirit, modern booking flow.</p>
+        <div class="mt-8 flex gap-3">
+          <a href="#catalog" class="px-5 py-3 text-xs uppercase tracking-[0.2em] border border-[var(--oro-metallico)] bg-[var(--oro-metallico)] text-black font-semibold rounded">Explore Fleet</a>
+          <a href="#booking" class="px-5 py-3 text-xs uppercase tracking-[0.2em] border border-white/25 rounded">Start Booking</a>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden border border-[var(--oro-metallico)]/40">
+        <img src="https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg" alt="Ferrari 250 GTO" class="w-full h-[420px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="max-w-7xl mx-auto px-5 py-16">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div>
+        <p class="mono-font text-xs uppercase tracking-[0.3em] text-white/50">1960-1969 Curated Archive</p>
+        <h2 class="display-font text-4xl md:text-6xl">Complete Car Catalog</h2>
+      </div>
+      <div class="flex flex-wrap gap-2" id="filters"></div>
+    </div>
+    <div id="stats" class="text-xs uppercase tracking-[0.2em] text-white/60 mb-6"></div>
+    <div id="grid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+  </section>
+
+  <section id="experience" class="border-y border-white/10 bg-black/30">
+    <div class="max-w-7xl mx-auto px-5 py-14 grid md:grid-cols-3 gap-8">
+      <article class="border border-white/10 rounded-xl p-6">
+        <h3 class="display-font text-2xl text-[var(--oro-metallico)]">Concierge Delivery</h3>
+        <p class="mt-3 text-white/70">Door-to-door handover with premium orientation and route planning.</p>
+      </article>
+      <article class="border border-white/10 rounded-xl p-6">
+        <h3 class="display-font text-2xl text-[var(--oro-metallico)]">Insurance Included</h3>
+        <p class="mt-3 text-white/70">Transparent pricing with vintage specialist coverage included.</p>
+      </article>
+      <article class="border border-white/10 rounded-xl p-6">
+        <h3 class="display-font text-2xl text-[var(--oro-metallico)]">Verified Heritage</h3>
+        <p class="mt-3 text-white/70">Each model is curated for period-correct authenticity and quality.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="booking" class="max-w-7xl mx-auto px-5 py-16">
+    <h2 class="display-font text-4xl mb-6">Booking Flow Preview</h2>
+    <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <div class="border border-white/15 rounded-xl p-5"><span class="mono-font text-[var(--oro-metallico)]">01</span><p class="mt-2">Select model, year and location.</p></div>
+      <div class="border border-white/15 rounded-xl p-5"><span class="mono-font text-[var(--oro-metallico)]">02</span><p class="mt-2">Choose dates, pricing and insurance tier.</p></div>
+      <div class="border border-white/15 rounded-xl p-5"><span class="mono-font text-[var(--oro-metallico)]">03</span><p class="mt-2">Confirm and track rental in dashboard.</p></div>
+    </div>
+  </section>
+
+  <script>
+    const cars = [
+      { id: 1, name: "Ferrari 250 GTO", model: "1962 Tipo 539/62", brand: "Ferrari", year: 1962, location: "Maranello", price: 4200, image: "https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg" },
+      { id: 2, name: "Lamborghini Miura P400", model: "1966 P400", brand: "Lamborghini", year: 1966, location: "Sant'Agata", price: 2900, image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200" },
+      { id: 3, name: "Alfa Romeo Giulia Sprint GTA", model: "1965 Alleggerita", brand: "Alfa Romeo", year: 1965, location: "Milan", price: 1250, image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=1200" },
+      { id: 4, name: "Maserati Ghibli", model: "1967 4.7", brand: "Maserati", year: 1967, location: "Turin", price: 1650, image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=1200" },
+      { id: 5, name: "Ferrari 275 GTB", model: "1964 Scaglietti", brand: "Ferrari", year: 1964, location: "Modena", price: 2600, image: "https://images.unsplash.com/photo-1592193660979-241777794c41?auto=format&fit=crop&q=80&w=1200" },
+      { id: 6, name: "Alfa Romeo Spider Duetto", model: "1966 1600", brand: "Alfa Romeo", year: 1966, location: "Liguria", price: 820, image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200" },
+      { id: 7, name: "Ferrari 330 GTC", model: "1966 Series I", brand: "Ferrari", year: 1966, location: "Florence", price: 2200, image: "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&q=80&w=1200" },
+      { id: 8, name: "Ferrari 365 GTB/4 Daytona", model: "1968 Competizione", brand: "Ferrari", year: 1968, location: "Rome", price: 3400, image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=1200" },
+      { id: 9, name: "Lamborghini 400 GT", model: "1966 2+2", brand: "Lamborghini", year: 1966, location: "Como", price: 1850, image: "https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&q=80&w=1200" },
+      { id: 10, name: "Lamborghini Islero", model: "1968 GT", brand: "Lamborghini", year: 1968, location: "Bergamo", price: 2100, image: "https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&q=80&w=1200" },
+      { id: 11, name: "Lamborghini Espada", model: "1968 Series I", brand: "Lamborghini", year: 1968, location: "Bologna", price: 1780, image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1200" },
+      { id: 12, name: "Maserati Mistral", model: "1964 3.7", brand: "Maserati", year: 1964, location: "Genoa", price: 1480, image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&q=80&w=1200" },
+      { id: 13, name: "Maserati Sebring", model: "1963 Series II", brand: "Maserati", year: 1963, location: "Lake Garda", price: 1360, image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=1200" },
+      { id: 14, name: "Maserati Quattroporte", model: "1966 Series I", brand: "Maserati", year: 1966, location: "Milan", price: 1420, image: "https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?auto=format&fit=crop&q=80&w=1200" },
+      { id: 15, name: "Alfa Romeo 1750 GTV", model: "1968 Veloce", brand: "Alfa Romeo", year: 1968, location: "Turin", price: 980, image: "https://images.unsplash.com/photo-1471444928139-48c5bf5173f8?auto=format&fit=crop&q=80&w=1200" },
+      { id: 16, name: "Alfa Romeo Giulia TZ", model: "1963 Zagato", brand: "Alfa Romeo", year: 1963, location: "Brescia", price: 1980, image: "https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?auto=format&fit=crop&q=80&w=1200" },
+      { id: 17, name: "Fiat Dino Spider", model: "1967 Pininfarina", brand: "Fiat", year: 1967, location: "Sicily", price: 940, image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&q=80&w=1200" },
+      { id: 18, name: "Fiat Dino Coupe", model: "1969 Bertone", brand: "Fiat", year: 1969, location: "Turin", price: 1020, image: "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=1200" },
+      { id: 19, name: "Lancia Fulvia Coupe", model: "1965 Rallye 1.3", brand: "Lancia", year: 1965, location: "Turin", price: 860, image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&q=80&w=1200" },
+      { id: 20, name: "Lancia Flaminia GT", model: "1962 Touring", brand: "Lancia", year: 1962, location: "Milan", price: 1290, image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=1200" },
+      { id: 21, name: "Bizzarrini 5300 GT", model: "1967 Strada", brand: "Bizzarrini", year: 1967, location: "Livorno", price: 2400, image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&q=80&w=1200" },
+      { id: 22, name: "Iso Grifo GL", model: "1967 Series I", brand: "Iso", year: 1967, location: "Como", price: 1880, image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=1200" },
+      { id: 23, name: "Ferrari 250 GT Lusso", model: "1963 Berlinetta", brand: "Ferrari", year: 1963, location: "Rome", price: 2700, image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&q=80&w=1200" },
+      { id: 24, name: "Maserati Mexico", model: "1968 4.2", brand: "Maserati", year: 1968, location: "Venice", price: 1580, image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=1200" }
+    ];
+
+    const filters = document.getElementById("filters");
+    const grid = document.getElementById("grid");
+    const stats = document.getElementById("stats");
+    const brands = ["all", ...new Set(cars.map(c => c.brand))];
+    let active = "all";
+
+    function renderFilters() {
+      filters.innerHTML = brands.map(b => {
+        const selected = b === active;
+        return `<button data-brand="${b}" class="px-4 py-2 rounded-full border text-xs uppercase tracking-[0.2em] ${selected ? "bg-[var(--oro-metallico)] text-black border-[var(--oro-metallico)]" : "border-white/20 text-white/80"}">${b}</button>`;
+      }).join("");
+      filters.querySelectorAll("button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          active = btn.dataset.brand;
+          renderFilters();
+          renderGrid();
+        });
+      });
+    }
+
+    function renderGrid() {
+      const list = active === "all" ? cars : cars.filter(c => c.brand === active);
+      stats.textContent = `${list.length} vehicles displayed`;
+      grid.innerHTML = list.map(car => `
+        <article class="gold-glow border border-white/15 rounded-2xl overflow-hidden bg-black/35 transition-all duration-300">
+          <img src="${car.image}" alt="${car.name}" class="w-full h-56 object-cover" />
+          <div class="p-4">
+            <div class="flex justify-between items-start gap-4">
+              <div>
+                <h3 class="display-font text-2xl leading-tight">${car.name}</h3>
+                <p class="text-sm text-white/70 mt-1">${car.model}</p>
+              </div>
+              <span class="mono-font text-[10px] uppercase tracking-[0.15em] text-[var(--oro-metallico)]">${car.brand}</span>
+            </div>
+            <div class="mt-4 flex justify-between text-xs uppercase tracking-[0.12em] text-white/70">
+              <span>${car.year}</span>
+              <span>${car.location}</span>
+              <span>EUR ${car.price}/day</span>
+            </div>
+          </div>
+        </article>`).join("");
+    }
+
+    renderFilters();
+    renderGrid();
+  </script>
+</body>
+</html>

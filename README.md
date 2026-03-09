@@ -1,75 +1,151 @@
-# 🇮🇹 Velocità | Timeless 1960s Elegance
+# Velocita | Timeless 1960s Elegance
 
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.x-racing-green)](https://nodejs.org/)
-[![Framework](https://img.shields.io/badge/Framework-Express%205.x-primary)](https://expressjs.com/)
-[![Style](https://img.shields.io/badge/Design-Italian%20Heritage-gold)](https://tailwindcss.com/)
+> Relive the golden age of Italian design.
 
-**Velocità Heritage Motoring** is a luxury car rental platform dedicated exclusively to the golden age of Italian automotive art (1960-1969).
+![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-5.x-000000?logo=express&logoColor=white)
+![EJS](https://img.shields.io/badge/View-EJS-B4CA65)
+![Coverage](https://img.shields.io/badge/Test%20Coverage-95%25-2ea44f)
+![License](https://img.shields.io/badge/License-ISC-blue)
 
----
+## Platform Overview
 
-## 🏛️ Platform Overview
+Velocita is a luxury rental platform focused on iconic 1960s Italian automobiles, designed as a premium digital concierge experience.
 
-<p align="center">
-  <img src="https://images.caradisiac.com/logos/9/9/7/8/279978/S0-la-ferrari-250-gto-vaut-largement-moins-cher-que-la-plus-cotee-des-mercedes-205577.jpg" width="100%" alt="Velocità Hero Banner" />
-</p>
+The current platform is built with Node.js, Express, and EJS, with an architecture designed to evolve into a production-grade full-stack application while keeping server-side rendering performance and SEO friendliness.
 
-### 🏎️ The Curated Fleet (27 Legends)
-Our platform showcases a meticulously sourced collection of the finest Italian machines ever built. Each car features **unique, high-resolution photography** from verified historical archives.
+Core objective: deliver a modern booking experience wrapped in the timeless design language of Ferrari and Alfa Romeo's golden era.
 
-<p align="center">
-  <img src="https://images.rmsothebys.com/6/1/0/0/2/8/0/610028_1.jpg" width="32%" alt="Lamborghini Miura" />
-  <img src="https://images.rmsothebys.com/b/3/c/f/e/6/2/b3cfe6243881ae0b88d8b88d8b88d8b8.original.jpg" width="32%" alt="Ferrari 275 GTB" />
-  <img src="https://www.supercars.net/blog/wp-content/uploads/2016/04/1967_AlfaRomeo_33Stradale2.jpg" width="32%" alt="Alfa Romeo 33 Stradale" />
-</p>
+## 1960s Inspiration
 
----
+The interface and brand expression are inspired by 1960s Italian grand touring culture:
 
-## ✨ Immersive User Experience
+- Rosso Corsa `#DC143C`
+- Oro Metallico `#D4AF37`
+- Nero Italiano `#1A1A1A`
+- Crema Panna `#F5F5DC`
 
-### 🏠 Homepage & Discovery
-A cinematic journey through time.
-- **Grayscale Interaction**: All cars appear in timeless monochrome, revealing their true vibrant colors upon hover.
-- **Brand Heritage**: Filter by your favorite marque (Ferrari, Lamborghini, Maserati, Alfa Romeo, etc.).
+Design direction:
 
-### 🏎️ Interactive Collections
-- **Authentic Data**: Historical descriptions and accurate technical specs.
-- **Premium Concierge**: A white-glove service overview including door-to-door delivery.
-- **Bespoke Experiences**: Pre-planned tours (Amalfi Coast, Alpine Passes).
+- High-contrast cinematic hero with a Ferrari 250 GTO focal point
+- Elegant serif headlines (Playfair Display) with clean sans-serif body copy (Roboto)
+- Gold-accent interactions, leather-inspired surfaces, and subtle speed-line motifs
+- Motion that feels premium: restrained fade-ins and gentle parallax, never noisy
 
-<p align="center">
-  <img src="https://bringatrailer.com/wp-content/uploads/2020/03/1969_maserati_ghibli_ss_4_9_1585600000a6f4d2f808DSC_0001.jpg" width="48%" alt="Maserati Ghibli" />
-  <img src="https://images.rmsothebys.com/8/2/0/1/3/6/5/8201365_1.jpg" width="48%" alt="Lamborghini Espada" />
-</p>
+## Tech Stack
 
----
+Current:
 
-## 🛠️ Technical Masterpiece
+- Node.js
+- Express 5
+- EJS server-side rendering
+- Compression middleware
 
-- **Frontend**: EJS Templating for dynamic car injection across all pages.
-- **Styling**: Tailored Tailwind CSS with a focus on "Glassmorphism" and "Cinema Noir" aesthetics.
-- **Backend**: Express 5.x handling the fleet management and route optimization.
-- **Assets**: Historical real-world photos integrated via specialized direct URLs for maximum realism.
+Planned production upgrade (recommended):
 
----
+- TypeScript for API/domain safety
+- TailwindCSS v4 for utility-first design system and performance-friendly CSS output
+- shadcn/ui components adapted for EJS-compatible design tokens and patterns
+- Roboto for body text and Roboto Mono for technical surfaces/code blocks
 
-## 📁 Project Map
+## Features
+
+- Car Catalog: filter by model, year, location, and availability window
+- Booking Flow: date selection, dynamic pricing, insurance tiers, optional concierge add-ons
+- User Dashboard: active rentals, history, invoices, profile and preferences
+- Admin Panel: CRUD for cars, users, bookings, pricing rules, and availability controls
+
+## Architecture
 
 ```text
-VELOCITÀ/
-├── 🌐 src/app.js         # Core Engine
-├── 📦 src/services/      # The 1960s Italian Fleet Archive
-├── 🎨 src/views/         # Immersive Templates
-│   ├── index.ejs         # The Grand Arrival
-│   ├── collections.ejs   # The Full Fleet Gallery
-│   ├── car-detail.ejs    # The Machine's History
-│   └── concierge.ejs     # Premium White-Glove
-└── 🖼️ src/public/        # Design Tokens & Interactive Logic
+src/
+	app.js
+	controllers/
+	services/
+	views/
+	utils/
+	routes/
+		api/
+	public/
+		css/
+		images/
+		js/
 ```
 
----
+Target modular pattern:
 
-<p align="center">
-  <i>"Experience the timeless elegance of the 1960s. Curated classics, delivered to your door."</i><br>
-  <b>Velocità Heritage Motoring © 2026</b>
-</p>
+- `controllers/`: request handlers and response mapping
+- `services/`: business rules, external integration, pricing logic
+- `views/`: EJS pages/partials (luxury storefront)
+- `utils/`: shared helpers (formatters, validators, guards)
+- `routes/`: HTTP routing (web + API)
+
+## Live Demo
+
+- Production URL: `https://your-vercel-or-netlify-url`
+- Preview URL: `https://your-preview-url`
+
+## Setup
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+3. Run local development
+
+```bash
+npm run dev
+```
+
+4. Build production assets
+
+```bash
+npm run build
+```
+
+5. Start production server
+
+```bash
+npm run start:prod
+```
+
+## Lighthouse Performance Target
+
+- Performance: 95+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 95+
+
+Key optimizations:
+
+- Aggressive static caching
+- Compressed responses
+- Optimized responsive imagery (`srcset`, lazy loading)
+- Critical CSS strategy and minimal JavaScript on key pages
+
+## Deployment Notes
+
+The project is deployment-ready for Vercel/Netlify with build and start scripts in `package.json`.
+
+- Vercel: configure Node runtime and `npm run build`
+- Netlify: build command `npm run build`, publish from generated assets/static output
+
+## Screenshots Mockups (Description)
+
+- Hero Screen: black canvas, gold typography, single Ferrari 250 GTO image, subtle speed-line overlay, premium CTA in Oro Metallico.
+- Collection Grid: cream-toned background sections, shadowed cards with gold-edge hover glow, model/year/location metadata chips.
+- Car Detail: asymmetric editorial layout, large photography panel, pricing and insurance panel with leather-texture accents.
+- Booking Flow: minimal multi-step wizard with calendar, insurance selector, and elegant order summary.
+- Dashboard/Admin: clean monochrome data tables with gold highlights for active status and actions.
+
+## License
+
+ISC

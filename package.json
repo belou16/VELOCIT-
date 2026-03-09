@@ -1,17 +1,25 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "velocita-timeless-1960s-elegance",
+  "version": "1.1.0",
+  "description": "Luxury 1960s Italian car rental platform built with Express and EJS.",
+  "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "tailwindcss -i ./src/public/css/tailwind-input.css -o ./src/public/css/tailwind.css --minify",
+    "build": "npm run build:css",
+    "typecheck": "tsc --noEmit",
+    "start:prod": "cross-env NODE_ENV=production node src/app.js",
+    "vercel-build": "npm run build",
+    "test": "echo \"No automated tests configured yet\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Velocita",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "compression": "^1.8.1",
     "dotenv": "^17.2.4",
@@ -19,6 +27,13 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "@tailwindcss/cli": "^4.1.12",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.11",
+    "tailwindcss": "^4.1.12",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
   }
 }

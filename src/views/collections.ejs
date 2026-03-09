@@ -1,98 +1,77 @@
 <%- include('partials/header') %>
 
-<main class="pt-32 pb-24">
-    <div class="max-w-7xl mx-auto px-6 mb-16">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12">
-            <div>
-                <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">Exotic Collection</span>
-                <h1 class="text-5xl md:text-8xl font-display font-medium text-white italic">La Dolce Vita</h1>
+<main class="pt-60 pb-60 bg-[#030303]">
+    <div class="apple-container">
+        <% const categories = ['all', ...new Set(fleet.map((car) => car.category))]; %>
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-24 border-b border-white/5 pb-24 mb-32">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-white/40 mb-10">
+                    The Archive // 1960-1969 // <%= fleet.length %> cars
+                </div>
+                <h1 class="text-7xl md:text-[140px] font-black tracking-tighter text-white italic-heading italic uppercase leading-[0.85]">
+                    Proven <br/>
+                    <span class="text-white/20 not-italic">Heritage.</span>
+                </h1>
             </div>
-            <div class="flex flex-wrap gap-4" id="category-filters">
-                <button class="filter-btn active px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="all">
-                    All Legends
-                </button>
-                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Ferrari">
-                    Ferrari
-                </button>
-                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Lamborghini">
-                    Lamborghini
-                </button>
-                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Alfa Romeo">
-                    Alfa Romeo
-                </button>
-                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Maserati">
-                    Maserati
-                </button>
-                <button class="filter-btn px-6 py-2 rounded-full border border-white/20 text-cream/60 text-sm uppercase tracking-widest hover:border-primary hover:text-white transition-all" data-category="Lancia">
-                    Lancia
-                </button>
+            
+            <div class="flex flex-wrap gap-4" id="filters">
+                <% categories.forEach(cat => { %>
+                    <button class="filter-btn px-10 py-4 rounded-full border border-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-white/30 hover:text-white transition-all duration-300 <%= cat === 'all' ? 'bg-white text-black border-transparent' : 'bg-white/5' %>" data-category="<%= cat %>">
+                        <%= cat %>
+                    </button>
+                <% }) %>
             </div>
         </div>
-    </div>
 
-    <section class="px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="fleet-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-40" id="fleet-grid">
             <% fleet.forEach(car => { %>
-                <a href="/car/<%= car.id %>" class="car-card group cursor-pointer block" data-category="<%= car.category %>">
-                    <div class="relative aspect-[4/5] overflow-hidden rounded-2xl mb-8 chrome-border shadow-2xl">
-                        <img alt="<%= car.name %>" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" src="<%= car.image %>" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1200'"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-60"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <div class="bg-primary/95 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-bold text-white inline-block mb-4 shadow-xl">
-                                FROM $<%= car.price %>/DAY
+                <div class="car-card group" data-category="<%= car.category %>">
+                    <a href="/car/<%= car.id %>" class="block">
+                        <div class="apple-glass p-2 rounded-[64px] group-hover:scale-[1.01] mb-12 overflow-hidden transition-all duration-700">
+                            <div class="aspect-[4/5] rounded-[56px] overflow-hidden bg-neutral-900 relative">
+                                <img src="<%= car.image %>" alt="<%= car.name %>" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000" loading="lazy" />
+                                <div class="absolute top-12 left-12 apple-glass px-8 py-3 rounded-full text-[10px] font-black text-white italic-heading italic">
+                                    €<%= car.price %> / DAY
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-3xl font-display font-medium mb-2 group-hover:text-primary transition-colors text-white"><%= car.name %></h3>
-                            <p class="text-cream/50 text-sm tracking-widest uppercase"><%= car.model %></p>
+                        <div class="px-8 flex items-start justify-between">
+                            <div>
+                                <h3 class="text-4xl font-black italic-heading italic text-white uppercase tracking-tighter mb-2"><%= car.name %></h3>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] text-white/20"><%= car.model %></p>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-[0.5em] text-white/10 italic italic-heading"><%= car.category %></span>
                         </div>
-                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-primary transition-all">
-                            <span class="material-icons text-white">east</span>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             <% }) %>
         </div>
-    </section>
+    </div>
 </main>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const filters = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.car-card');
-
-        filters.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active state
-                filters.forEach(f => f.classList.remove('active', 'border-primary', 'text-white'));
-                btn.classList.add('active', 'border-primary', 'text-white');
-
-                const category = btn.dataset.category;
-
-                cards.forEach(card => {
-                    if (category === 'all' || card.dataset.category === category) {
-                        card.style.display = 'block';
-                        setTimeout(() => card.style.opacity = '1', 10);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => card.style.display = 'none', 300);
-                    }
-                });
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.car-card');
+    
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => {
+                b.classList.remove('bg-white', 'text-black', 'border-transparent');
+                b.classList.add('bg-white/5', 'text-white/30', 'border-white/5');
+            });
+            btn.classList.add('bg-white', 'text-black', 'border-transparent');
+            btn.classList.remove('bg-white/5', 'text-white/30', 'border-white/5');
+            
+            const cat = btn.dataset.category;
+            cards.forEach(card => {
+                if(cat === 'all' || card.dataset.category === cat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         });
     });
 </script>
-
-<style>
-    .filter-btn.active {
-        border-color: #D4AF37; /* Primary Gold */
-        color: white;
-    }
-    .car-card {
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-</style>
 
 <%- include('partials/footer') %>

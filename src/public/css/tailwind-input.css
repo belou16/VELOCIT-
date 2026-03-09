@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rosso-corsa: #DC143C;
+  --color-oro-metallico: #D4AF37;
+  --color-nero-italiano: #1A1A1A;
+  --color-crema-panna: #F5F5DC;
+  --font-sans: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
